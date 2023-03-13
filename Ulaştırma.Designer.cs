@@ -1,6 +1,6 @@
 ﻿namespace Proje
 {
-    partial class Form1
+    partial class Ulaştırma
     {
         /// <summary>
         ///  Required designer variable.
