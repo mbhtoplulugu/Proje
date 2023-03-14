@@ -17,6 +17,8 @@ namespace Proje
             InitializeComponent();
         }
 
+<<<<<<< HEAD
+=======
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -32,9 +34,41 @@ namespace Proje
 
         }
 
+>>>>>>> 4235c13319a3d7a4466ba7c2f85e25a19ccc1d77
         private void frmPerGiris_Load(object sender, EventArgs e)
         {
 
         }
+<<<<<<< HEAD
+
+        private void btnPerEkle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void textAdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textSoyadi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textSinifi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void textRutbesi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textSicili_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+=======
+>>>>>>> 4235c13319a3d7a4466ba7c2f85e25a19ccc1d77
     }
 }
