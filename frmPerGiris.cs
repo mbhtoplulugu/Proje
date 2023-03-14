@@ -68,6 +68,11 @@ namespace Proje
         {
 
         }
+
+        private void btnPerIptal_Click(object sender, EventArgs e)
+        {
+
+        }
 =======
 >>>>>>> 4235c13319a3d7a4466ba7c2f85e25a19ccc1d77
     }
