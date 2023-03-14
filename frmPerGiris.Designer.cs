@@ -188,7 +188,7 @@
 
         #endregion
 
-<<<<<<< HEAD
+
         private TextBox textAdi;
         private TextBox textSoyadi;
         private TextBox textSinifi;
@@ -201,19 +201,6 @@
         private TextBox textSicili;
         private Button btnPerEkle;
         private Button btnPerIptal;
-=======
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private TextBox textBox5;
-        private Button button1;
-        private Button button2;
->>>>>>> 4235c13319a3d7a4466ba7c2f85e25a19ccc1d77
+
     }
 }

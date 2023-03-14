@@ -1,10 +1,8 @@
 ﻿namespace Proje
 {
-<<<<<<< HEAD
+
     partial class FrmUlastirma
-=======
-    partial class Ulaştırma
->>>>>>> 4235c13319a3d7a4466ba7c2f85e25a19ccc1d77
+
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
+
             this.btnPerKayit = new System.Windows.Forms.Button();
             this.btnPerList = new System.Windows.Forms.Button();
             this.btnAracKayıt = new System.Windows.Forms.Button();
@@ -146,7 +144,7 @@
 
         }
 
-        #endregion
+        
 
         private Button btnPerKayit;
         private Button btnPerList;
@@ -155,14 +153,9 @@
         private Button btnEmir;
         private Button btnTeslim;
         private Button btnCikis;
-=======
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+
         }
 
         #endregion
->>>>>>> 4235c13319a3d7a4466ba7c2f85e25a19ccc1d77
+
     }
-}
