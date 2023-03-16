@@ -54,10 +54,18 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "MERCEDES",
+            "BMC",
+            "RENAULT",
+            "FORD",
+            "FIAT",
+            "TOYOTA"});
             this.comboBox1.Location = new System.Drawing.Point(129, 70);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -157,6 +165,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "KAYIT";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 

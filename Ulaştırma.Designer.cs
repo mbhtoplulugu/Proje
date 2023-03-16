@@ -93,7 +93,7 @@
             this.btnEmir.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnEmir.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEmir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEmir.Location = new System.Drawing.Point(29, 260);
+            this.btnEmir.Location = new System.Drawing.Point(31, 260);
             this.btnEmir.Name = "btnEmir";
             this.btnEmir.Size = new System.Drawing.Size(140, 73);
             this.btnEmir.TabIndex = 4;

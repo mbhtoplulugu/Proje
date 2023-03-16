@@ -14,7 +14,8 @@ namespace Proje
 
         private void btnAracKayýt_Click(object sender, EventArgs e)
         {
-
+            frmAraç_Kayýt kayýt-new frmAraç_Kayýt();
+            kayýt.ShowDialog();
         }
     }
 
