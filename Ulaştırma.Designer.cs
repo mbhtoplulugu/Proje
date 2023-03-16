@@ -50,6 +50,7 @@
             this.btnPerKayit.TabIndex = 0;
             this.btnPerKayit.Text = "Personel Kayıt";
             this.btnPerKayit.UseVisualStyleBackColor = false;
+            this.btnPerKayit.Click += new System.EventHandler(this.btnPerKayit_Click);
             // 
             // btnPerList
             // 
@@ -62,6 +63,7 @@
             this.btnPerList.TabIndex = 1;
             this.btnPerList.Text = "Personel Listesi";
             this.btnPerList.UseVisualStyleBackColor = false;
+            this.btnPerList.Click += new System.EventHandler(this.btnPerList_Click);
             // 
             // btnAracKayıt
             // 
@@ -139,6 +141,7 @@
             this.Controls.Add(this.btnPerKayit);
             this.Name = "FrmUlastirma";
             this.Text = "Ulaştırma Kayıt Sistemi";
+            this.Load += new System.EventHandler(this.FrmUlastirma_Load);
             this.ResumeLayout(false);
 
         }

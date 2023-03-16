@@ -13,7 +13,7 @@ namespace Proje
         //alttaki kotları ne kadar connection istiyorsak o kadar çok kopyalayacağız
 
         public SqlConnection baglanti = new SqlConnection("Data Source=TB701-5887;Initial Catalog=Ulastirma;Integrated Security=True");
-        DataTable tablo;
+        DataTable tablo =new DataTable();
 
         public void ekle_sil_guncelle(SqlCommand komut, string sorgu)
         {
@@ -24,6 +24,13 @@ namespace Proje
             baglanti.Close();
 
         }
-
+        public DataTable listele(SqlDataAdapter adtr, string sorgu)
+        {
+            tablo = new DataTable();
+            adtr = new SqlDataAdapter(sorgu,baglanti);
+            adtr.Fill(tablo);
+            baglanti.Close();
+            return tablo;
+        }
     }
 }
