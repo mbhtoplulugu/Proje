@@ -30,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.btnPerKayit = new System.Windows.Forms.Button();
             this.btnPerList = new System.Windows.Forms.Button();
             this.btnAracKayıt = new System.Windows.Forms.Button();
@@ -75,6 +74,7 @@
             this.btnAracKayıt.TabIndex = 2;
             this.btnAracKayıt.Text = "Araç Kayıt";
             this.btnAracKayıt.UseVisualStyleBackColor = false;
+            this.btnAracKayıt.Click += new System.EventHandler(this.btnAracKayıt_Click);
             // 
             // btnAracList
             // 

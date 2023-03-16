@@ -12,6 +12,10 @@ namespace Proje
             Application.Exit();
         }
 
+        private void btnAracKayýt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
