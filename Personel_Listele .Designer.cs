@@ -209,14 +209,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Firebrick;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(391, 27);
+            this.label1.BackColor = System.Drawing.Color.SandyBrown;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(325, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(455, 19);
+            this.label1.Size = new System.Drawing.Size(604, 19);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Lütfen sileceğiniz ve verisini değiştireceğiniz personelin üzerini çift tıklayını" +
-    "z ";
+            this.label1.Text = "* Lütfen sileceğiniz ve verisini değiştireceğiniz personelin üzerini çift tıklayı" +
+    "nız ";
             // 
             // frmPerList
             // 

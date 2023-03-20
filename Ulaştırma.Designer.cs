@@ -76,6 +76,7 @@
             this.btnAracKayıt.TabIndex = 2;
             this.btnAracKayıt.Text = "Araç Kayıt";
             this.btnAracKayıt.UseVisualStyleBackColor = false;
+            this.btnAracKayıt.Click += new System.EventHandler(this.btnAracKayıt_Click);
             // 
             // btnAracList
             // 

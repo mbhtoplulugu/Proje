@@ -9,7 +9,11 @@ namespace Proje
         }
         private void btnCikis_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult i = MessageBox.Show("Sayfadan cikmak istiyor musunuz?", "Exit Window", MessageBoxButtons.YesNo);
+            if (i == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnPerKayit_Click(object sender, EventArgs e)
@@ -25,6 +29,11 @@ namespace Proje
         }
 
         private void FrmUlastirma_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAracKayýt_Click(object sender, EventArgs e)
         {
 
         }

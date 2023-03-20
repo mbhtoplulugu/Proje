@@ -43,7 +43,8 @@ namespace Proje
 
         private void btnIptal_Click(object sender, EventArgs e)
         {
-            this.Close();
+             this.Close();
+            
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -58,18 +59,23 @@ namespace Proje
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            string sorgu = "update personel set ad=@ad,soyad=@soyad,sinifi@sınıfı," +
-                "rütbesi=@rütbesi,sicili = @sicili";
-            SqlCommand komut2 = new SqlCommand();
-            komut2.Parameters.AddWithValue("@ad", textAd.Text);
-            komut2.Parameters.AddWithValue("@soyad", textSoyad.Text);
-            komut2.Parameters.AddWithValue("@sınıfı", textSinif.Text);
-            komut2.Parameters.AddWithValue("@rütbesi", textRutbe.Text);
-            komut2.Parameters.AddWithValue("@sicili", textSicil.Text);
-            personel.ekle_sil_guncelle(komut2, sorgu);
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            personel.ekle_sil_guncelle(komut2, sorgu);
-            YenileListele();
+            DialogResult i = MessageBox.Show("Personelin verileri geri dönmemek üzere değiştirilecektir. \nDevam etmek istiyor musunuz?", "Remove Window", MessageBoxButtons.YesNo);
+            if (i == DialogResult.Yes)
+            {
+                string sorgu = "update personel set ad=@ad, soyad=@soyad, sınıfı=@sınıfı, rütbesi=@rütbesi, sicili=@sicili where " +
+                                "sicili = @sicili ";
+                SqlCommand komut2 = new SqlCommand();
+                komut2.Parameters.AddWithValue("@ad", textAd.Text);
+                komut2.Parameters.AddWithValue("@soyad", textSoyad.Text);
+                komut2.Parameters.AddWithValue("@sınıfı", textSinif.Text);
+                komut2.Parameters.AddWithValue("@rütbesi", textRutbe.Text);
+                komut2.Parameters.AddWithValue("@sicili", textSicil.Text);
+                
+                personel.ekle_sil_guncelle(komut2, sorgu);
+                foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                
+                YenileListele();
+            }
         }
 
         private void btnAra_Click_1(object sender, EventArgs e)
@@ -83,6 +89,9 @@ namespace Proje
 
         private void btnSil_Click(object sender, EventArgs e)
         {
+            DialogResult i = MessageBox.Show("Personeli silmek istiyor musunuz?", "Remove Window", MessageBoxButtons.YesNo);
+            if (i == DialogResult.Yes)
+            {
             string sorgu = "delete from personel where ad=@ad and soyad=@soyad and sınıfı = @sınıfı" +
                 " and rütbesi=@rütbesi and sicili = @sicili";
             SqlCommand komut2 = new SqlCommand();
@@ -95,6 +104,8 @@ namespace Proje
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
             personel.ekle_sil_guncelle(komut2, sorgu);
             YenileListele();
+
+            }
 
         }
     }
