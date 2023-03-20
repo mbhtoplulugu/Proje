@@ -13,7 +13,7 @@ namespace Proje
 {
     public partial class frmPerGiris : Form
     {
-        UlastirmaDB arac = new UlastirmaDB();
+        UlastirmaDB personel = new UlastirmaDB();
         public frmPerGiris()
         {
             InitializeComponent();
@@ -33,7 +33,8 @@ namespace Proje
             komut2.Parameters.AddWithValue("@sınıfı", textSinifi.Text);
             komut2.Parameters.AddWithValue("@rütbesi", textRutbesi.Text);
             komut2.Parameters.AddWithValue("@sicili", textSicili.Text);
-            UlastirmaDB.ekle_sil_guncelle(komut2,sorgu1);
+            personel.ekle_sil_guncelle(komut2,sorgu1);
+            foreach(Control item in Controls) if (item is TextBox) item.Text = "";
         }
 
 

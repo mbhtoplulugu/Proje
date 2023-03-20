@@ -12,7 +12,7 @@ namespace Proje
 {
     public partial class frmAraç_Kayıt : Form
     {
-        Proje AracTahsis = new Proje();
+        UlastirmaDB AracTahsis = new UlastirmaDB();
         public frmAraç_Kayıt()
         {
             InitializeComponent();
