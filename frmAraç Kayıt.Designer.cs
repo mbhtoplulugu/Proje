@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.PLAKAtxt = new System.Windows.Forms.TextBox();
+            this.MARKAcombo = new System.Windows.Forms.ComboBox();
+            this.SERIcombo = new System.Windows.Forms.ComboBox();
+            this.YILtxt = new System.Windows.Forms.TextBox();
+            this.KMtxt = new System.Windows.Forms.TextBox();
+            this.YAKITcombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,62 +44,63 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // PLAKAtxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 0;
+            this.PLAKAtxt.Location = new System.Drawing.Point(129, 29);
+            this.PLAKAtxt.Name = "PLAKAtxt";
+            this.PLAKAtxt.Size = new System.Drawing.Size(121, 23);
+            this.PLAKAtxt.TabIndex = 0;
+            this.PLAKAtxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // comboBox1
+            // MARKAcombo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.MARKAcombo.FormattingEnabled = true;
+            this.MARKAcombo.Items.AddRange(new object[] {
             "MERCEDES",
             "BMC",
             "RENAULT",
             "FORD",
             "FIAT",
             "TOYOTA"});
-            this.comboBox1.Location = new System.Drawing.Point(129, 70);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.MARKAcombo.Location = new System.Drawing.Point(129, 70);
+            this.MARKAcombo.Name = "MARKAcombo";
+            this.MARKAcombo.Size = new System.Drawing.Size(121, 23);
+            this.MARKAcombo.TabIndex = 1;
+            this.MARKAcombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // SERIcombo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(129, 111);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 2;
+            this.SERIcombo.FormattingEnabled = true;
+            this.SERIcombo.Location = new System.Drawing.Point(129, 111);
+            this.SERIcombo.Name = "SERIcombo";
+            this.SERIcombo.Size = new System.Drawing.Size(121, 23);
+            this.SERIcombo.TabIndex = 2;
             // 
-            // textBox2
+            // YILtxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 23);
-            this.textBox2.TabIndex = 3;
+            this.YILtxt.Location = new System.Drawing.Point(129, 153);
+            this.YILtxt.Name = "YILtxt";
+            this.YILtxt.Size = new System.Drawing.Size(121, 23);
+            this.YILtxt.TabIndex = 3;
             // 
-            // textBox3
+            // KMtxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 195);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 23);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.KMtxt.Location = new System.Drawing.Point(129, 195);
+            this.KMtxt.Name = "KMtxt";
+            this.KMtxt.Size = new System.Drawing.Size(121, 23);
+            this.KMtxt.TabIndex = 4;
+            this.KMtxt.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // comboBox3
+            // YAKITcombo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.YAKITcombo.FormattingEnabled = true;
+            this.YAKITcombo.Items.AddRange(new object[] {
             "DİZEL",
             "BENZİN"});
-            this.comboBox3.Location = new System.Drawing.Point(129, 235);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 6;
+            this.YAKITcombo.Location = new System.Drawing.Point(129, 235);
+            this.YAKITcombo.Name = "YAKITcombo";
+            this.YAKITcombo.Size = new System.Drawing.Size(121, 23);
+            this.YAKITcombo.TabIndex = 6;
             // 
             // label1
             // 
@@ -191,12 +192,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.YAKITcombo);
+            this.Controls.Add(this.KMtxt);
+            this.Controls.Add(this.YILtxt);
+            this.Controls.Add(this.SERIcombo);
+            this.Controls.Add(this.MARKAcombo);
+            this.Controls.Add(this.PLAKAtxt);
             this.Name = "frmAraç_Kayıt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Araç Kayıt Sayfası";
@@ -207,12 +208,12 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private ComboBox comboBox3;
+        private TextBox PLAKAtxt;
+        private ComboBox MARKAcombo;
+        private ComboBox SERIcombo;
+        private TextBox YILtxt;
+        private TextBox KMtxt;
+        private ComboBox YAKITcombo;
         private Label label1;
         private Label label2;
         private Label label3;
