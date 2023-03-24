@@ -45,6 +45,7 @@
             this.btnAra = new System.Windows.Forms.Button();
             this.btnListele = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(538, 328);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnIptal
@@ -211,19 +213,30 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SandyBrown;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(325, 9);
+            this.label1.Location = new System.Drawing.Point(415, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(604, 19);
+            this.label1.Size = new System.Drawing.Size(486, 19);
             this.label1.TabIndex = 25;
-            this.label1.Text = "* Lütfen sileceğiniz ve verisini değiştireceğiniz personelin üzerini çift tıklayı" +
-    "nız ";
+            this.label1.Text = "*** Lütfen sileceğiniz ve verisini değiştireceğiniz personelin***";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.SandyBrown;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(542, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(234, 19);
+            this.label2.TabIndex = 25;
+            this.label2.Text = " ***üzerini çift tıklayınız...***";
             // 
             // frmPerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(956, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnListele);
             this.Controls.Add(this.btnSil);
@@ -269,5 +282,6 @@
         private Button btnAra;
         private Button btnListele;
         private Label label1;
+        private Label label2;
     }
 }

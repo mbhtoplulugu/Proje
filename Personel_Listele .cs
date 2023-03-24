@@ -63,7 +63,7 @@ namespace Proje
             if (i == DialogResult.Yes)
             {
                 string sorgu = "update personel set ad=@ad, soyad=@soyad, sınıfı=@sınıfı, rütbesi=@rütbesi, sicili=@sicili where " +
-                                "sicili = @sicili ";
+                                "sicili = @sicili and sınıfı=@sınıfı ";
                 SqlCommand komut2 = new SqlCommand();
                 komut2.Parameters.AddWithValue("@ad", textAd.Text);
                 komut2.Parameters.AddWithValue("@soyad", textSoyad.Text);
@@ -106,6 +106,11 @@ namespace Proje
             YenileListele();
 
             }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

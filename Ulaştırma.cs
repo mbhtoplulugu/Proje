@@ -38,6 +38,13 @@ namespace Proje
             frmAraç_Kayýt kayýt=new frmAraç_Kayýt();
             kayýt.ShowDialog();
         }
+
+        private void btnGörev_Click(object sender, EventArgs e)
+        {
+            frmGorevlendirme duty = new frmGorevlendirme();
+            duty.ShowDialog();
+       
+        }
     }
 
 }

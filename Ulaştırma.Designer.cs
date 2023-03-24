@@ -34,8 +34,7 @@
             this.btnPerList = new System.Windows.Forms.Button();
             this.btnAracKayıt = new System.Windows.Forms.Button();
             this.btnAracList = new System.Windows.Forms.Button();
-            this.btnEmir = new System.Windows.Forms.Button();
-            this.btnTeslim = new System.Windows.Forms.Button();
+            this.btnGörev = new System.Windows.Forms.Button();
             this.btnCikis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -90,29 +89,18 @@
             this.btnAracList.Text = "Araç Listesi";
             this.btnAracList.UseVisualStyleBackColor = false;
             // 
-            // btnEmir
+            // btnGörev
             // 
-            this.btnEmir.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnEmir.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEmir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEmir.Location = new System.Drawing.Point(31, 260);
-            this.btnEmir.Name = "btnEmir";
-            this.btnEmir.Size = new System.Drawing.Size(140, 73);
-            this.btnEmir.TabIndex = 4;
-            this.btnEmir.Text = "Çıkış Formu ve Emri";
-            this.btnEmir.UseVisualStyleBackColor = false;
-            // 
-            // btnTeslim
-            // 
-            this.btnTeslim.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnTeslim.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTeslim.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTeslim.Location = new System.Drawing.Point(210, 260);
-            this.btnTeslim.Name = "btnTeslim";
-            this.btnTeslim.Size = new System.Drawing.Size(140, 73);
-            this.btnTeslim.TabIndex = 5;
-            this.btnTeslim.Text = "Teslim Etme";
-            this.btnTeslim.UseVisualStyleBackColor = false;
+            this.btnGörev.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnGörev.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGörev.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnGörev.Location = new System.Drawing.Point(210, 260);
+            this.btnGörev.Name = "btnGörev";
+            this.btnGörev.Size = new System.Drawing.Size(140, 73);
+            this.btnGörev.TabIndex = 5;
+            this.btnGörev.Text = "Görevlendir";
+            this.btnGörev.UseVisualStyleBackColor = false;
+            this.btnGörev.Click += new System.EventHandler(this.btnGörev_Click);
             // 
             // btnCikis
             // 
@@ -131,11 +119,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Desktop;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(532, 392);
             this.Controls.Add(this.btnCikis);
-            this.Controls.Add(this.btnTeslim);
-            this.Controls.Add(this.btnEmir);
+            this.Controls.Add(this.btnGörev);
             this.Controls.Add(this.btnAracList);
             this.Controls.Add(this.btnAracKayıt);
             this.Controls.Add(this.btnPerList);
@@ -153,8 +140,7 @@
         private Button btnPerList;
         private Button btnAracKayıt;
         private Button btnAracList;
-        private Button btnEmir;
-        private Button btnTeslim;
+        private Button btnGörev;
         private Button btnCikis;
 
         }
