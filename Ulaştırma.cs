@@ -38,6 +38,12 @@ namespace Proje
             frmAraç_Kayýt kayýt=new frmAraç_Kayýt();
             kayýt.ShowDialog();
         }
+
+        private void btnAracList_Click(object sender, EventArgs e)
+        {
+            AraçListele listele = new AraçListele();
+            listele.ShowDialog();
+        }
     }
 
 }

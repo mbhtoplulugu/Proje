@@ -89,6 +89,7 @@
             this.btnAracList.TabIndex = 3;
             this.btnAracList.Text = "Araç Listesi";
             this.btnAracList.UseVisualStyleBackColor = false;
+            this.btnAracList.Click += new System.EventHandler(this.btnAracList_Click);
             // 
             // btnEmir
             // 
