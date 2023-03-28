@@ -53,7 +53,6 @@
             this.donusGun = new System.Windows.Forms.DateTimePicker();
             this.donusZaman = new System.Windows.Forms.DateTimePicker();
             this.cikisZaman = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.cikisGun = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -109,9 +108,9 @@
             this.btnTemizle.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemizle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTemizle.Location = new System.Drawing.Point(84, 179);
+            this.btnTemizle.Location = new System.Drawing.Point(22, 179);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(94, 35);
+            this.btnTemizle.Size = new System.Drawing.Size(109, 35);
             this.btnTemizle.TabIndex = 18;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = false;
@@ -122,9 +121,9 @@
             this.btnPerAra.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnPerAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerAra.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPerAra.Location = new System.Drawing.Point(178, 179);
+            this.btnPerAra.Location = new System.Drawing.Point(154, 179);
             this.btnPerAra.Name = "btnPerAra";
-            this.btnPerAra.Size = new System.Drawing.Size(94, 35);
+            this.btnPerAra.Size = new System.Drawing.Size(109, 35);
             this.btnPerAra.TabIndex = 18;
             this.btnPerAra.Text = "Personel Ara";
             this.btnPerAra.UseVisualStyleBackColor = false;
@@ -233,7 +232,6 @@
             this.groupBox2.Controls.Add(this.donusGun);
             this.groupBox2.Controls.Add(this.donusZaman);
             this.groupBox2.Controls.Add(this.cikisZaman);
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
             this.groupBox2.Controls.Add(this.cikisGun);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
@@ -275,9 +273,9 @@
             this.btnAracListele.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnAracListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAracListele.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAracListele.Location = new System.Drawing.Point(300, 179);
+            this.btnAracListele.Location = new System.Drawing.Point(258, 179);
             this.btnAracListele.Name = "btnAracListele";
-            this.btnAracListele.Size = new System.Drawing.Size(94, 35);
+            this.btnAracListele.Size = new System.Drawing.Size(109, 35);
             this.btnAracListele.TabIndex = 18;
             this.btnAracListele.Text = "Araç Listele";
             this.btnAracListele.UseVisualStyleBackColor = false;
@@ -288,9 +286,9 @@
             this.btnKonvoyListele.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnKonvoyListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKonvoyListele.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnKonvoyListele.Location = new System.Drawing.Point(400, 179);
+            this.btnKonvoyListele.Location = new System.Drawing.Point(384, 179);
             this.btnKonvoyListele.Name = "btnKonvoyListele";
-            this.btnKonvoyListele.Size = new System.Drawing.Size(94, 35);
+            this.btnKonvoyListele.Size = new System.Drawing.Size(109, 35);
             this.btnKonvoyListele.TabIndex = 18;
             this.btnKonvoyListele.Text = "Konvoy Listele";
             this.btnKonvoyListele.UseVisualStyleBackColor = false;
@@ -331,7 +329,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRefresh.Location = new System.Drawing.Point(6, 179);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(94, 35);
+            this.btnRefresh.Size = new System.Drawing.Size(109, 35);
             this.btnRefresh.TabIndex = 18;
             this.btnRefresh.Text = "Yenile";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -343,9 +341,9 @@
             this.btnGorev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGorev.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnGorev.ForeColor = System.Drawing.Color.Red;
-            this.btnGorev.Location = new System.Drawing.Point(106, 179);
+            this.btnGorev.Location = new System.Drawing.Point(132, 179);
             this.btnGorev.Name = "btnGorev";
-            this.btnGorev.Size = new System.Drawing.Size(94, 35);
+            this.btnGorev.Size = new System.Drawing.Size(109, 35);
             this.btnGorev.TabIndex = 18;
             this.btnGorev.Text = "Görevlendir";
             this.btnGorev.UseVisualStyleBackColor = false;
@@ -361,28 +359,24 @@
             // 
             // donusZaman
             // 
-            this.donusZaman.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.donusZaman.CustomFormat = " HH:mm ";
+            this.donusZaman.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.donusZaman.Location = new System.Drawing.Point(177, 133);
             this.donusZaman.Name = "donusZaman";
-            this.donusZaman.Size = new System.Drawing.Size(73, 23);
+            this.donusZaman.ShowUpDown = true;
+            this.donusZaman.Size = new System.Drawing.Size(64, 23);
             this.donusZaman.TabIndex = 16;
             // 
             // cikisZaman
             // 
-            this.cikisZaman.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.cikisZaman.CustomFormat = " HH:mm ";
+            this.cikisZaman.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.cikisZaman.Location = new System.Drawing.Point(177, 104);
             this.cikisZaman.Name = "cikisZaman";
-            this.cikisZaman.Size = new System.Drawing.Size(73, 23);
+            this.cikisZaman.ShowUpDown = true;
+            this.cikisZaman.Size = new System.Drawing.Size(64, 23);
             this.cikisZaman.TabIndex = 16;
             this.cikisZaman.ValueChanged += new System.EventHandler(this.cikisZaman_ValueChanged);
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(177, 107);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(73, 23);
-            this.dateTimePicker3.TabIndex = 16;
             // 
             // cikisGun
             // 
@@ -557,7 +551,6 @@
         private DateTimePicker donusGun;
         private DateTimePicker donusZaman;
         private DateTimePicker cikisZaman;
-        private DateTimePicker dateTimePicker3;
         private DateTimePicker cikisGun;
         private Label label5;
         private Label label4;

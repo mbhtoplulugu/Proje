@@ -96,14 +96,14 @@ namespace Proje
                 {
                     if (checkKonvoy.Checked)
                     {
+                        
                         // AYNI İSİMLİ KONVOY VAR MI KONTROL
                         string sorgu1 = "update personel set KONVOY_ID=@konvoyID where SICILI = @sicili and SINIFI=@sınıfı ";
-                        string sorgu2 = "insert into konvoy(KONVOY_ID,KONVOY_KOMUTANI,KONVOY_CIKIS_TARIHI,KONVOY_CIKIS_SAATI,KONVOY_DONUS_TARIHI,KONVOY_DONUS_SAATI)" +
-                            " values (@konvoyID,@konvoyK,@konvoyCikisTarihi,@konvoyCikisSaati,@konvoyDonusTarih,@konvoyDonusSaati) ";
+                        string sorgu2 = "insert into Konvoy (KONVOY_ID, KONVOY_KOMUTANI, KONVOY_CIKIS_TARIHI, KONVOY_CIKIS_SAATI, KONVOY_DONUS_TARIHI, KONVOY_DONUS_SAATI)" +
+                            " values (@konvoyID, @konvoyK, @konvoyCikisTarihi, @konvoyCikisSaati, @konvoyDonusTarih, @konvoyDonusSaati) ";
                         SqlCommand komut = new SqlCommand();
                         komut.Parameters.AddWithValue("@konvoyID", textKonvoy.Text);
-                        komut.Parameters.AddWithValue("@konvoyK", textAdi.Text + " " + textSoyadi.Text + " " + textSinifi.Text + " " +
-                            textRutbesi.Text + " " + textSicili.Text);
+                        komut.Parameters.AddWithValue("@konvoyK", textSinifi.Text + " " + textRutbesi.Text + " " + textAdi.Text + " " + textSoyadi.Text + " " + textSicili.Text);
                         komut.Parameters.AddWithValue("@konvoyCikisTarihi", cikisGun.Text);
                         komut.Parameters.AddWithValue("@konvoyCikisSaati", cikisZaman.Text);
                         komut.Parameters.AddWithValue("@konvoyDonusTarih", donusGun.Text);
@@ -126,10 +126,9 @@ namespace Proje
                     else
                     {
                         string sorgu = "update arac set CIKIS_TARIHI = @CikisTarihi, CIKIS_SAATI = @CikisSaati, " +
-                "DONUS_TARIHI = @DonusTarih, DONUS_SAATI = @DonusSaati, " +
-                "DURUM= 'DOLU' where PLAKA = @plaka ";
+                            "DONUS_TARIHI = @DonusTarih, DONUS_SAATI = @DonusSaati,DURUM= 'DOLU' where PLAKA = @plaka ";
                         SqlCommand komut = new SqlCommand();
-                        komut.Parameters.AddWithValue("@plaka", comboKonvoyPlaka.Text);
+                        komut.Parameters.AddWithValue("@plaka", comboPlaka.Text);
                         komut.Parameters.AddWithValue("@CikisTarihi", cikisGun.Text);
                         komut.Parameters.AddWithValue("@CikisSaati", cikisZaman.Text);
                         komut.Parameters.AddWithValue("@DonusTarih", donusGun.Text);
@@ -203,5 +202,8 @@ namespace Proje
         {
 
         }
+
+        
+        
     }
 }

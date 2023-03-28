@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboAraclar = new System.Windows.Forms.ComboBox();
-            this.btnİptal = new System.Windows.Forms.Button();
             this.btnGüncelle = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -72,25 +71,12 @@
             this.comboAraclar.TabIndex = 1;
             this.comboAraclar.SelectedIndexChanged += new System.EventHandler(this.comboAraclar_SelectedIndexChanged);
             // 
-            // btnİptal
-            // 
-            this.btnİptal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnİptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnİptal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnİptal.Location = new System.Drawing.Point(116, 329);
-            this.btnİptal.Name = "btnİptal";
-            this.btnİptal.Size = new System.Drawing.Size(98, 40);
-            this.btnİptal.TabIndex = 29;
-            this.btnİptal.Text = "İPTAL";
-            this.btnİptal.UseVisualStyleBackColor = false;
-            this.btnİptal.Click += new System.EventHandler(this.btnİptal_Click);
-            // 
             // btnGüncelle
             // 
             this.btnGüncelle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGüncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGüncelle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGüncelle.Location = new System.Drawing.Point(12, 329);
+            this.btnGüncelle.Location = new System.Drawing.Point(104, 334);
             this.btnGüncelle.Name = "btnGüncelle";
             this.btnGüncelle.Size = new System.Drawing.Size(98, 40);
             this.btnGüncelle.TabIndex = 28;
@@ -234,7 +220,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(852, 457);
             this.Controls.Add(this.btnSİL);
-            this.Controls.Add(this.btnİptal);
             this.Controls.Add(this.btnGüncelle);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -264,7 +249,6 @@
 
         private DataGridView dataGridView1;
         private ComboBox comboAraclar;
-        private Button btnİptal;
         private Button btnGüncelle;
         private Label label7;
         private Label label5;

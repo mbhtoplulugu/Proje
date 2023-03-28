@@ -73,7 +73,7 @@ namespace Proje
             YenileAraçlarListele();
             SERIcombo.Items.Clear();
             foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+            foreach (Control item in Controls) if (item is ComboBox) item.Text = "";
         }
 
         private void MARKAcombo_SelectedIndexChanged(object sender, EventArgs e)
