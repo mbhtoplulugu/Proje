@@ -70,6 +70,7 @@
             this.comboAraclar.Name = "comboAraclar";
             this.comboAraclar.Size = new System.Drawing.Size(121, 23);
             this.comboAraclar.TabIndex = 1;
+            this.comboAraclar.SelectedIndexChanged += new System.EventHandler(this.comboAraclar_SelectedIndexChanged);
             // 
             // btnİptal
             // 
@@ -79,6 +80,7 @@
             this.btnİptal.TabIndex = 29;
             this.btnİptal.Text = "İPTAL";
             this.btnİptal.UseVisualStyleBackColor = true;
+            this.btnİptal.Click += new System.EventHandler(this.btnİptal_Click);
             // 
             // btnGüncelle
             // 
@@ -191,6 +193,7 @@
             this.MARKAcombo.Name = "MARKAcombo";
             this.MARKAcombo.Size = new System.Drawing.Size(121, 23);
             this.MARKAcombo.TabIndex = 17;
+            this.MARKAcombo.SelectedIndexChanged += new System.EventHandler(this.MARKAcombo_SelectedIndexChanged);
             // 
             // PLAKAtxt
             // 
@@ -207,6 +210,7 @@
             this.btnSİL.TabIndex = 30;
             this.btnSİL.Text = "SİL";
             this.btnSİL.UseVisualStyleBackColor = true;
+            this.btnSİL.Click += new System.EventHandler(this.btnSİL_Click);
             // 
             // AraçListele
             // 

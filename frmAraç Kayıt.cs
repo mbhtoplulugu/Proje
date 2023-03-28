@@ -91,7 +91,7 @@ namespace Proje
         private void button1_Click(object sender, EventArgs e)
         {
             if (PLAKAtxt.Text.Length > 0) {
-                string cumle = "insert into arac (PLAKA,MARKA,SERI,YIL,KM,YAKIT,TARIH,DURUM) values (@PLAKA,@MARKA,@SERI,@YIL,@KM,@YAKIT,@TARIH,@DURUM)";
+                string cumle = "insert into arac (PLAKA,MARKA,SERI,YIL,KM,YAKIT,DURUM) values (@PLAKA,@MARKA,@SERI,@YIL,@KM,@YAKIT,@DURUM)";
                 SqlCommand komut2 = new SqlCommand();
                 komut2.Parameters.AddWithValue("@PLAKA", PLAKAtxt.Text);
                 komut2.Parameters.AddWithValue("@MARKA", MARKAcombo.Text);
@@ -99,7 +99,6 @@ namespace Proje
                 komut2.Parameters.AddWithValue("@YIL", YILtxt.Text);
                 komut2.Parameters.AddWithValue("@KM", KMtxt.Text);
                 komut2.Parameters.AddWithValue("@YAKIT", YAKITcombo.Text);
-                komut2.Parameters.AddWithValue("@TARIH", DateTime.Now.ToString());
                 komut2.Parameters.AddWithValue("@DURUM", "BOŞ");
                 AracTahsis.ekle_sil_guncelle(komut2, cumle);
                 SERIcombo.Items.Clear();
