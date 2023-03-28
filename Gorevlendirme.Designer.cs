@@ -76,14 +76,15 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 218);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 231);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(783, 235);
+            this.dataGridView1.Size = new System.Drawing.Size(783, 222);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.btnTemizle);
             this.groupBox1.Controls.Add(this.btnPerAra);
             this.groupBox1.Controls.Add(this.lblSicili);
@@ -98,17 +99,19 @@
             this.groupBox1.Controls.Add(this.textAdi);
             this.groupBox1.Location = new System.Drawing.Point(12, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 207);
+            this.groupBox1.Size = new System.Drawing.Size(279, 220);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Personel Bilgileri";
+            this.groupBox1.Text = "Araç Komutanı Bilgileri";
             // 
             // btnTemizle
             // 
-            this.btnTemizle.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTemizle.Location = new System.Drawing.Point(83, 170);
+            this.btnTemizle.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTemizle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTemizle.Location = new System.Drawing.Point(84, 179);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(65, 35);
+            this.btnTemizle.Size = new System.Drawing.Size(94, 35);
             this.btnTemizle.TabIndex = 18;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = false;
@@ -116,10 +119,12 @@
             // 
             // btnPerAra
             // 
-            this.btnPerAra.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPerAra.Location = new System.Drawing.Point(154, 170);
+            this.btnPerAra.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnPerAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerAra.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPerAra.Location = new System.Drawing.Point(178, 179);
             this.btnPerAra.Name = "btnPerAra";
-            this.btnPerAra.Size = new System.Drawing.Size(117, 35);
+            this.btnPerAra.Size = new System.Drawing.Size(94, 35);
             this.btnPerAra.TabIndex = 18;
             this.btnPerAra.Text = "Personel Ara";
             this.btnPerAra.UseVisualStyleBackColor = false;
@@ -128,16 +133,16 @@
             // lblSicili
             // 
             this.lblSicili.AutoSize = true;
-            this.lblSicili.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSicili.Location = new System.Drawing.Point(6, 144);
+            this.lblSicili.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSicili.Location = new System.Drawing.Point(13, 144);
             this.lblSicili.Name = "lblSicili";
-            this.lblSicili.Size = new System.Drawing.Size(72, 17);
+            this.lblSicili.Size = new System.Drawing.Size(66, 17);
             this.lblSicili.TabIndex = 29;
             this.lblSicili.Text = "Sicili       :";
             // 
             // textSicili
             // 
-            this.textSicili.Location = new System.Drawing.Point(83, 138);
+            this.textSicili.Location = new System.Drawing.Point(85, 138);
             this.textSicili.Multiline = true;
             this.textSicili.Name = "textSicili";
             this.textSicili.Size = new System.Drawing.Size(188, 24);
@@ -146,46 +151,46 @@
             // lblRutbesi
             // 
             this.lblRutbesi.AutoSize = true;
-            this.lblRutbesi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRutbesi.Location = new System.Drawing.Point(2, 115);
+            this.lblRutbesi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblRutbesi.Location = new System.Drawing.Point(12, 115);
             this.lblRutbesi.Name = "lblRutbesi";
-            this.lblRutbesi.Size = new System.Drawing.Size(76, 17);
+            this.lblRutbesi.Size = new System.Drawing.Size(67, 17);
             this.lblRutbesi.TabIndex = 27;
             this.lblRutbesi.Text = "Rütbesi   :";
             // 
             // lblSinifi
             // 
             this.lblSinifi.AutoSize = true;
-            this.lblSinifi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSinifi.Location = new System.Drawing.Point(5, 86);
+            this.lblSinifi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSinifi.Location = new System.Drawing.Point(11, 86);
             this.lblSinifi.Name = "lblSinifi";
-            this.lblSinifi.Size = new System.Drawing.Size(73, 17);
+            this.lblSinifi.Size = new System.Drawing.Size(68, 17);
             this.lblSinifi.TabIndex = 26;
             this.lblSinifi.Text = "Sınıfı       :";
             // 
             // lblSoyadi
             // 
             this.lblSoyadi.AutoSize = true;
-            this.lblSoyadi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSoyadi.Location = new System.Drawing.Point(3, 57);
+            this.lblSoyadi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSoyadi.Location = new System.Drawing.Point(9, 57);
             this.lblSoyadi.Name = "lblSoyadi";
-            this.lblSoyadi.Size = new System.Drawing.Size(75, 17);
+            this.lblSoyadi.Size = new System.Drawing.Size(70, 17);
             this.lblSoyadi.TabIndex = 25;
             this.lblSoyadi.Text = "Soyadı     :";
             // 
             // lblAdi
             // 
             this.lblAdi.AutoSize = true;
-            this.lblAdi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAdi.Location = new System.Drawing.Point(2, 28);
+            this.lblAdi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAdi.Location = new System.Drawing.Point(7, 28);
             this.lblAdi.Name = "lblAdi";
-            this.lblAdi.Size = new System.Drawing.Size(76, 17);
+            this.lblAdi.Size = new System.Drawing.Size(72, 17);
             this.lblAdi.TabIndex = 24;
             this.lblAdi.Text = "Adı          :";
             // 
             // textRutbesi
             // 
-            this.textRutbesi.Location = new System.Drawing.Point(83, 110);
+            this.textRutbesi.Location = new System.Drawing.Point(85, 110);
             this.textRutbesi.Multiline = true;
             this.textRutbesi.Name = "textRutbesi";
             this.textRutbesi.Size = new System.Drawing.Size(188, 24);
@@ -193,7 +198,7 @@
             // 
             // textSinifi
             // 
-            this.textSinifi.Location = new System.Drawing.Point(83, 82);
+            this.textSinifi.Location = new System.Drawing.Point(85, 82);
             this.textSinifi.Multiline = true;
             this.textSinifi.Name = "textSinifi";
             this.textSinifi.Size = new System.Drawing.Size(188, 24);
@@ -201,7 +206,7 @@
             // 
             // textSoyadi
             // 
-            this.textSoyadi.Location = new System.Drawing.Point(83, 54);
+            this.textSoyadi.Location = new System.Drawing.Point(85, 54);
             this.textSoyadi.Multiline = true;
             this.textSoyadi.Name = "textSoyadi";
             this.textSoyadi.Size = new System.Drawing.Size(188, 24);
@@ -209,7 +214,7 @@
             // 
             // textAdi
             // 
-            this.textAdi.Location = new System.Drawing.Point(83, 26);
+            this.textAdi.Location = new System.Drawing.Point(85, 26);
             this.textAdi.Multiline = true;
             this.textAdi.Name = "textAdi";
             this.textAdi.Size = new System.Drawing.Size(188, 24);
@@ -217,6 +222,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox2.Controls.Add(this.checkKonvoy);
             this.groupBox2.Controls.Add(this.btnAracListele);
             this.groupBox2.Controls.Add(this.btnKonvoyListele);
@@ -243,7 +249,7 @@
             this.groupBox2.Controls.Add(this.comboMarka);
             this.groupBox2.Location = new System.Drawing.Point(297, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(498, 207);
+            this.groupBox2.Size = new System.Drawing.Size(498, 220);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Araç-Konvoy Bilgileri";
@@ -251,7 +257,7 @@
             // checkKonvoy
             // 
             this.checkKonvoy.AutoSize = true;
-            this.checkKonvoy.BackColor = System.Drawing.Color.PaleGreen;
+            this.checkKonvoy.BackColor = System.Drawing.Color.LawnGreen;
             this.checkKonvoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkKonvoy.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.checkKonvoy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -266,10 +272,12 @@
             // 
             // btnAracListele
             // 
-            this.btnAracListele.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAracListele.Location = new System.Drawing.Point(266, 170);
+            this.btnAracListele.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnAracListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAracListele.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAracListele.Location = new System.Drawing.Point(300, 179);
             this.btnAracListele.Name = "btnAracListele";
-            this.btnAracListele.Size = new System.Drawing.Size(109, 35);
+            this.btnAracListele.Size = new System.Drawing.Size(94, 35);
             this.btnAracListele.TabIndex = 18;
             this.btnAracListele.Text = "Araç Listele";
             this.btnAracListele.UseVisualStyleBackColor = false;
@@ -277,10 +285,12 @@
             // 
             // btnKonvoyListele
             // 
-            this.btnKonvoyListele.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnKonvoyListele.Location = new System.Drawing.Point(390, 171);
+            this.btnKonvoyListele.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnKonvoyListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKonvoyListele.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnKonvoyListele.Location = new System.Drawing.Point(400, 179);
             this.btnKonvoyListele.Name = "btnKonvoyListele";
-            this.btnKonvoyListele.Size = new System.Drawing.Size(108, 35);
+            this.btnKonvoyListele.Size = new System.Drawing.Size(94, 35);
             this.btnKonvoyListele.TabIndex = 18;
             this.btnKonvoyListele.Text = "Konvoy Listele";
             this.btnKonvoyListele.UseVisualStyleBackColor = false;
@@ -288,34 +298,40 @@
             // 
             // btnKonAracSil
             // 
-            this.btnKonAracSil.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnKonAracSil.Location = new System.Drawing.Point(285, 104);
+            this.btnKonAracSil.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnKonAracSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKonAracSil.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnKonAracSil.Location = new System.Drawing.Point(300, 104);
             this.btnKonAracSil.Name = "btnKonAracSil";
-            this.btnKonAracSil.Size = new System.Drawing.Size(92, 47);
+            this.btnKonAracSil.Size = new System.Drawing.Size(94, 35);
             this.btnKonAracSil.TabIndex = 18;
-            this.btnKonAracSil.Text = "Konvodan Araç Sil";
+            this.btnKonAracSil.Text = "Araç Sil";
             this.btnKonAracSil.UseVisualStyleBackColor = false;
             this.btnKonAracSil.Visible = false;
             this.btnKonAracSil.Click += new System.EventHandler(this.btnKonAracSil_Click);
             // 
             // btnKonAracEkle
             // 
-            this.btnKonAracEkle.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnKonAracEkle.Location = new System.Drawing.Point(404, 104);
+            this.btnKonAracEkle.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnKonAracEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKonAracEkle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnKonAracEkle.Location = new System.Drawing.Point(400, 104);
             this.btnKonAracEkle.Name = "btnKonAracEkle";
-            this.btnKonAracEkle.Size = new System.Drawing.Size(92, 47);
+            this.btnKonAracEkle.Size = new System.Drawing.Size(94, 35);
             this.btnKonAracEkle.TabIndex = 18;
-            this.btnKonAracEkle.Text = "Konvoya Araç Ekle";
+            this.btnKonAracEkle.Text = "Araç Ekle";
             this.btnKonAracEkle.UseVisualStyleBackColor = false;
             this.btnKonAracEkle.Visible = false;
             this.btnKonAracEkle.Click += new System.EventHandler(this.btnKonAracEkle_Click);
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnRefresh.Location = new System.Drawing.Point(6, 171);
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRefresh.Location = new System.Drawing.Point(6, 179);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(65, 34);
+            this.btnRefresh.Size = new System.Drawing.Size(94, 35);
             this.btnRefresh.TabIndex = 18;
             this.btnRefresh.Text = "Yenile";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -323,12 +339,13 @@
             // 
             // btnGorev
             // 
-            this.btnGorev.BackColor = System.Drawing.Color.Firebrick;
-            this.btnGorev.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnGorev.ForeColor = System.Drawing.Color.Cyan;
-            this.btnGorev.Location = new System.Drawing.Point(77, 170);
+            this.btnGorev.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.btnGorev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGorev.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGorev.ForeColor = System.Drawing.Color.Red;
+            this.btnGorev.Location = new System.Drawing.Point(106, 179);
             this.btnGorev.Name = "btnGorev";
-            this.btnGorev.Size = new System.Drawing.Size(104, 35);
+            this.btnGorev.Size = new System.Drawing.Size(94, 35);
             this.btnGorev.TabIndex = 18;
             this.btnGorev.Text = "Görevlendir";
             this.btnGorev.UseVisualStyleBackColor = false;
@@ -357,6 +374,7 @@
             this.cikisZaman.Name = "cikisZaman";
             this.cikisZaman.Size = new System.Drawing.Size(73, 23);
             this.cikisZaman.TabIndex = 16;
+            this.cikisZaman.ValueChanged += new System.EventHandler(this.cikisZaman_ValueChanged);
             // 
             // dateTimePicker3
             // 
@@ -377,45 +395,46 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(6, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 17);
+            this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "Dönüş Tarihi";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(6, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 17);
+            this.label4.Size = new System.Drawing.Size(74, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "Çıkış Tarihi";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(6, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.Size = new System.Drawing.Size(31, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "Seri";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(6, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 14;
             this.label2.Text = "Marka";
             // 
             // textKonvoy
             // 
+            this.textKonvoy.BackColor = System.Drawing.Color.LawnGreen;
             this.textKonvoy.Location = new System.Drawing.Point(377, 41);
             this.textKonvoy.Multiline = true;
             this.textKonvoy.Name = "textKonvoy";
@@ -426,7 +445,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.PaleGreen;
+            this.label6.BackColor = System.Drawing.Color.LawnGreen;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(284, 45);
             this.label6.Name = "label6";
@@ -438,7 +457,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.PaleGreen;
+            this.label7.BackColor = System.Drawing.Color.LawnGreen;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(284, 73);
             this.label7.Name = "label7";
@@ -450,10 +469,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(6, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
+            this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 13;
             this.label1.Text = "Plaka";
             // 
@@ -468,6 +487,7 @@
             // 
             // comboKonvoyPlaka
             // 
+            this.comboKonvoyPlaka.BackColor = System.Drawing.Color.LawnGreen;
             this.comboKonvoyPlaka.FormattingEnabled = true;
             this.comboKonvoyPlaka.Location = new System.Drawing.Point(377, 71);
             this.comboKonvoyPlaka.Name = "comboKonvoyPlaka";

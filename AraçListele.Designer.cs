@@ -74,75 +74,87 @@
             // 
             // btnİptal
             // 
+            this.btnİptal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnİptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnİptal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnİptal.Location = new System.Drawing.Point(116, 329);
             this.btnİptal.Name = "btnİptal";
-            this.btnİptal.Size = new System.Drawing.Size(105, 40);
+            this.btnİptal.Size = new System.Drawing.Size(98, 40);
             this.btnİptal.TabIndex = 29;
             this.btnİptal.Text = "İPTAL";
-            this.btnİptal.UseVisualStyleBackColor = true;
+            this.btnİptal.UseVisualStyleBackColor = false;
             this.btnİptal.Click += new System.EventHandler(this.btnİptal_Click);
             // 
             // btnGüncelle
             // 
-            this.btnGüncelle.Location = new System.Drawing.Point(5, 329);
+            this.btnGüncelle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGüncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGüncelle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnGüncelle.Location = new System.Drawing.Point(12, 329);
             this.btnGüncelle.Name = "btnGüncelle";
-            this.btnGüncelle.Size = new System.Drawing.Size(105, 40);
+            this.btnGüncelle.Size = new System.Drawing.Size(98, 40);
             this.btnGüncelle.TabIndex = 28;
             this.btnGüncelle.Text = "GÜNCELLE";
-            this.btnGüncelle.UseVisualStyleBackColor = true;
+            this.btnGüncelle.UseVisualStyleBackColor = false;
             this.btnGüncelle.Click += new System.EventHandler(this.btnGüncelle_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 283);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(13, 283);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.Size = new System.Drawing.Size(53, 17);
             this.label7.TabIndex = 27;
             this.label7.Text = "YAKIT";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 243);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(13, 243);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 15);
+            this.label5.Size = new System.Drawing.Size(32, 17);
             this.label5.TabIndex = 26;
             this.label5.Text = "KM";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 201);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(13, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 15);
+            this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 25;
             this.label4.Text = "YIL";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 159);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(13, 159);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 15);
+            this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 24;
             this.label3.Text = "SERİ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 118);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(13, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 23;
             this.label2.Text = "MARKA";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 74);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(13, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.Size = new System.Drawing.Size(59, 17);
             this.label1.TabIndex = 22;
             this.label1.Text = "PLAKA";
             // 
@@ -204,18 +216,22 @@
             // 
             // btnSİL
             // 
+            this.btnSİL.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSİL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSİL.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSİL.Location = new System.Drawing.Point(744, 74);
             this.btnSİL.Name = "btnSİL";
             this.btnSİL.Size = new System.Drawing.Size(80, 40);
             this.btnSİL.TabIndex = 30;
             this.btnSİL.Text = "SİL";
-            this.btnSİL.UseVisualStyleBackColor = true;
+            this.btnSİL.UseVisualStyleBackColor = false;
             this.btnSİL.Click += new System.EventHandler(this.btnSİL_Click);
             // 
             // AraçListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(852, 457);
             this.Controls.Add(this.btnSİL);
             this.Controls.Add(this.btnİptal);

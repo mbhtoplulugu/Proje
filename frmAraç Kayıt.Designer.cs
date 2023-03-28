@@ -62,7 +62,7 @@
             "FORD",
             "FIAT",
             "TOYOTA"});
-            this.MARKAcombo.Location = new System.Drawing.Point(129, 70);
+            this.MARKAcombo.Location = new System.Drawing.Point(129, 69);
             this.MARKAcombo.Name = "MARKAcombo";
             this.MARKAcombo.Size = new System.Drawing.Size(121, 23);
             this.MARKAcombo.TabIndex = 1;
@@ -71,21 +71,21 @@
             // SERIcombo
             // 
             this.SERIcombo.FormattingEnabled = true;
-            this.SERIcombo.Location = new System.Drawing.Point(129, 111);
+            this.SERIcombo.Location = new System.Drawing.Point(129, 109);
             this.SERIcombo.Name = "SERIcombo";
             this.SERIcombo.Size = new System.Drawing.Size(121, 23);
             this.SERIcombo.TabIndex = 2;
             // 
             // YILtxt
             // 
-            this.YILtxt.Location = new System.Drawing.Point(129, 153);
+            this.YILtxt.Location = new System.Drawing.Point(129, 149);
             this.YILtxt.Name = "YILtxt";
             this.YILtxt.Size = new System.Drawing.Size(121, 23);
             this.YILtxt.TabIndex = 3;
             // 
             // KMtxt
             // 
-            this.KMtxt.Location = new System.Drawing.Point(129, 195);
+            this.KMtxt.Location = new System.Drawing.Point(129, 189);
             this.KMtxt.Name = "KMtxt";
             this.KMtxt.Size = new System.Drawing.Size(121, 23);
             this.KMtxt.TabIndex = 4;
@@ -97,7 +97,7 @@
             this.YAKITcombo.Items.AddRange(new object[] {
             "DİZEL",
             "BENZİN"});
-            this.YAKITcombo.Location = new System.Drawing.Point(129, 235);
+            this.YAKITcombo.Location = new System.Drawing.Point(129, 229);
             this.YAKITcombo.Name = "YAKITcombo";
             this.YAKITcombo.Size = new System.Drawing.Size(121, 23);
             this.YAKITcombo.TabIndex = 6;
@@ -105,9 +105,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.Size = new System.Drawing.Size(59, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "PLAKA";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -115,9 +116,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 73);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "MARKA";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -125,41 +127,47 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 114);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(12, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 15);
+            this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "SERİ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 156);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(12, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 15);
+            this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "YIL";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 198);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(12, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 15);
+            this.label5.Size = new System.Drawing.Size(32, 17);
             this.label5.TabIndex = 11;
             this.label5.Text = "KM";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 238);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(12, 234);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.Size = new System.Drawing.Size(53, 17);
             this.label7.TabIndex = 13;
             this.label7.Text = "YAKIT";
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(12, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 40);
@@ -170,6 +178,8 @@
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.Location = new System.Drawing.Point(145, 284);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 40);
@@ -182,8 +192,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(606, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(397, 386);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label7);

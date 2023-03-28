@@ -198,5 +198,10 @@ namespace Proje
                 foreach (Control item in Controls) if (item is ComboBox) item.Text = "";
             }
         }
+
+        private void cikisZaman_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

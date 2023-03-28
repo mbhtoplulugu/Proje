@@ -30,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUlastirma));
             this.btnPerKayit = new System.Windows.Forms.Button();
             this.btnPerList = new System.Windows.Forms.Button();
             this.btnAracKayıt = new System.Windows.Forms.Button();
@@ -40,12 +41,13 @@
             // 
             // btnPerKayit
             // 
-            this.btnPerKayit.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnPerKayit.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPerKayit.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPerKayit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerKayit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPerKayit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPerKayit.Location = new System.Drawing.Point(29, 23);
+            this.btnPerKayit.Location = new System.Drawing.Point(12, 12);
             this.btnPerKayit.Name = "btnPerKayit";
-            this.btnPerKayit.Size = new System.Drawing.Size(140, 73);
+            this.btnPerKayit.Size = new System.Drawing.Size(76, 75);
             this.btnPerKayit.TabIndex = 0;
             this.btnPerKayit.Text = "Personel Kayıt";
             this.btnPerKayit.UseVisualStyleBackColor = false;
@@ -53,12 +55,13 @@
             // 
             // btnPerList
             // 
-            this.btnPerList.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnPerList.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPerList.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPerList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerList.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPerList.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPerList.Location = new System.Drawing.Point(210, 23);
+            this.btnPerList.Location = new System.Drawing.Point(154, 12);
             this.btnPerList.Name = "btnPerList";
-            this.btnPerList.Size = new System.Drawing.Size(140, 73);
+            this.btnPerList.Size = new System.Drawing.Size(76, 75);
             this.btnPerList.TabIndex = 1;
             this.btnPerList.Text = "Personel Listesi";
             this.btnPerList.UseVisualStyleBackColor = false;
@@ -66,12 +69,13 @@
             // 
             // btnAracKayıt
             // 
-            this.btnAracKayıt.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAracKayıt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAracKayıt.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAracKayıt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAracKayıt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAracKayıt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAracKayıt.Location = new System.Drawing.Point(29, 130);
+            this.btnAracKayıt.Location = new System.Drawing.Point(296, 12);
             this.btnAracKayıt.Name = "btnAracKayıt";
-            this.btnAracKayıt.Size = new System.Drawing.Size(140, 73);
+            this.btnAracKayıt.Size = new System.Drawing.Size(76, 75);
             this.btnAracKayıt.TabIndex = 2;
             this.btnAracKayıt.Text = "Araç Kayıt";
             this.btnAracKayıt.UseVisualStyleBackColor = false;
@@ -79,12 +83,13 @@
             // 
             // btnAracList
             // 
-            this.btnAracList.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAracList.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAracList.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAracList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAracList.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAracList.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAracList.Location = new System.Drawing.Point(210, 130);
+            this.btnAracList.Location = new System.Drawing.Point(438, 12);
             this.btnAracList.Name = "btnAracList";
-            this.btnAracList.Size = new System.Drawing.Size(140, 73);
+            this.btnAracList.Size = new System.Drawing.Size(76, 75);
             this.btnAracList.TabIndex = 3;
             this.btnAracList.Text = "Araç Listesi";
             this.btnAracList.UseVisualStyleBackColor = false;
@@ -92,27 +97,29 @@
             // 
             // btnGörev
             // 
-            this.btnGörev.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnGörev.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGörev.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGörev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGörev.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGörev.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnGörev.Location = new System.Drawing.Point(210, 260);
+            this.btnGörev.Location = new System.Drawing.Point(580, 12);
             this.btnGörev.Name = "btnGörev";
-            this.btnGörev.Size = new System.Drawing.Size(140, 73);
+            this.btnGörev.Size = new System.Drawing.Size(76, 75);
             this.btnGörev.TabIndex = 5;
-            this.btnGörev.Text = "Görevlendir";
+            this.btnGörev.Text = "Görev Kayıt";
             this.btnGörev.UseVisualStyleBackColor = false;
             this.btnGörev.Click += new System.EventHandler(this.btnGörev_Click);
             // 
             // btnCikis
             // 
-            this.btnCikis.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCikis.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCikis.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCikis.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCikis.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCikis.Location = new System.Drawing.Point(431, 23);
+            this.btnCikis.Location = new System.Drawing.Point(722, 12);
             this.btnCikis.Name = "btnCikis";
-            this.btnCikis.Size = new System.Drawing.Size(89, 35);
+            this.btnCikis.Size = new System.Drawing.Size(76, 75);
             this.btnCikis.TabIndex = 6;
-            this.btnCikis.Text = "X(Çıkış)";
+            this.btnCikis.Text = "Çıkış";
             this.btnCikis.UseVisualStyleBackColor = false;
             this.btnCikis.Click += new System.EventHandler(this.btnCikis_Click);
             // 
@@ -120,8 +127,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(532, 392);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(814, 482);
             this.Controls.Add(this.btnCikis);
             this.Controls.Add(this.btnGörev);
             this.Controls.Add(this.btnAracList);

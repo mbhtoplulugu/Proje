@@ -77,52 +77,52 @@
             // lblAdi
             // 
             this.lblAdi.AutoSize = true;
-            this.lblAdi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAdi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAdi.Location = new System.Drawing.Point(7, 48);
             this.lblAdi.Name = "lblAdi";
-            this.lblAdi.Size = new System.Drawing.Size(118, 22);
+            this.lblAdi.Size = new System.Drawing.Size(35, 17);
             this.lblAdi.TabIndex = 4;
-            this.lblAdi.Text = "Adı               :";
+            this.lblAdi.Text = "ADI";
             // 
             // lblSoyadi
             // 
             this.lblSoyadi.AutoSize = true;
-            this.lblSoyadi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSoyadi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSoyadi.Location = new System.Drawing.Point(6, 93);
             this.lblSoyadi.Name = "lblSoyadi";
-            this.lblSoyadi.Size = new System.Drawing.Size(120, 22);
+            this.lblSoyadi.Size = new System.Drawing.Size(63, 17);
             this.lblSoyadi.TabIndex = 5;
-            this.lblSoyadi.Text = "Soyadı          :";
+            this.lblSoyadi.Text = "SOYADI";
             // 
             // lblSinifi
             // 
             this.lblSinifi.AutoSize = true;
-            this.lblSinifi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSinifi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSinifi.Location = new System.Drawing.Point(6, 131);
             this.lblSinifi.Name = "lblSinifi";
-            this.lblSinifi.Size = new System.Drawing.Size(117, 22);
+            this.lblSinifi.Size = new System.Drawing.Size(50, 17);
             this.lblSinifi.TabIndex = 6;
-            this.lblSinifi.Text = "Sınıfı            :";
+            this.lblSinifi.Text = "SINIFI";
             // 
             // lblRutbesi
             // 
             this.lblRutbesi.AutoSize = true;
-            this.lblRutbesi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRutbesi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRutbesi.Location = new System.Drawing.Point(6, 178);
             this.lblRutbesi.Name = "lblRutbesi";
-            this.lblRutbesi.Size = new System.Drawing.Size(117, 22);
+            this.lblRutbesi.Size = new System.Drawing.Size(70, 17);
             this.lblRutbesi.TabIndex = 7;
-            this.lblRutbesi.Text = "Rütbesi        :";
+            this.lblRutbesi.Text = "RÜTBESİ";
             // 
             // lblSicili
             // 
             this.lblSicili.AutoSize = true;
-            this.lblSicili.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSicili.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSicili.Location = new System.Drawing.Point(6, 218);
             this.lblSicili.Name = "lblSicili";
-            this.lblSicili.Size = new System.Drawing.Size(115, 22);
+            this.lblSicili.Size = new System.Drawing.Size(50, 17);
             this.lblSicili.TabIndex = 9;
-            this.lblSicili.Text = "Sicili            :";
+            this.lblSicili.Text = "SİCİLİ";
             // 
             // textSicili
             // 
@@ -134,31 +134,35 @@
             // 
             // btnPerEkle
             // 
+            this.btnPerEkle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPerEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerEkle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPerEkle.Location = new System.Drawing.Point(313, 256);
             this.btnPerEkle.Name = "btnPerEkle";
             this.btnPerEkle.Size = new System.Drawing.Size(66, 45);
             this.btnPerEkle.TabIndex = 10;
             this.btnPerEkle.Text = "EKLE";
-            this.btnPerEkle.UseVisualStyleBackColor = true;
+            this.btnPerEkle.UseVisualStyleBackColor = false;
             this.btnPerEkle.Click += new System.EventHandler(this.btnPerEkle_Click);
             // 
             // btnPerIptal
             // 
+            this.btnPerIptal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPerIptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerIptal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPerIptal.Location = new System.Drawing.Point(241, 256);
             this.btnPerIptal.Name = "btnPerIptal";
             this.btnPerIptal.Size = new System.Drawing.Size(66, 45);
             this.btnPerIptal.TabIndex = 11;
             this.btnPerIptal.Text = "İPTAL";
-            this.btnPerIptal.UseVisualStyleBackColor = true;
+            this.btnPerIptal.UseVisualStyleBackColor = false;
             this.btnPerIptal.Click += new System.EventHandler(this.btnPerIptal_Click);
             // 
             // frmPerGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(407, 362);
             this.Controls.Add(this.btnPerIptal);
             this.Controls.Add(this.btnPerEkle);
