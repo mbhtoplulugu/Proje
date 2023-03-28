@@ -27,7 +27,7 @@ namespace Proje
         private void btnPerEkle_Click(object sender, EventArgs e)
         {
             if (textSinifi.Text.Length > 0 && textSicili.Text.Length>0) {
-                string sorgu1 = "insert into personel(ad,soyad,sınıfı,rütbesi,sicili) values(@ad,@soyad,@sınıfı,@rütbesi,@sicili)";
+                string sorgu1 = "insert into personel(ad,soyad,SINIFI,RUTBESI,SICILI) values(@ad,@soyad,@sınıfı,@rütbesi,@sicili)";
                 SqlCommand komut2 = new SqlCommand();
                 komut2.Parameters.AddWithValue("@ad", textAdi.Text);
                 komut2.Parameters.AddWithValue("@soyad", textSoyadi.Text);
@@ -41,29 +41,6 @@ namespace Proje
             {
                 MessageBox.Show("Lütfen Personelin Sınıfı ve Sicili Kısmını Boş Bırakmayınız.", "Hata Penceresi", MessageBoxButtons.OK);
             }
-        }
-
-
-        private void textAdi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textSoyadi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textSinifi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textRutbesi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textSicili_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnPerIptal_Click(object sender, EventArgs e)

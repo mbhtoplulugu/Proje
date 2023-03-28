@@ -62,8 +62,8 @@ namespace Proje
             DialogResult i = MessageBox.Show("Personelin verileri geri dönmemek üzere değiştirilecektir. \nDevam etmek istiyor musunuz?", "Remove Window", MessageBoxButtons.YesNo);
             if (i == DialogResult.Yes)
             {
-                string sorgu = "update personel set ad=@ad, soyad=@soyad, sınıfı=@sınıfı, rütbesi=@rütbesi, sicili=@sicili where " +
-                                "sicili = @sicili and sınıfı=@sınıfı ";
+                string sorgu = "update personel set ad=@ad, soyad=@soyad, SINIFI=@sınıfı, RUTBESI=@rütbesi, sicili=@sicili where " +
+                                "SICILI = @sicili and sınıfı=@sınıfı ";
                 SqlCommand komut = new SqlCommand();
                 komut.Parameters.AddWithValue("@ad", textAd.Text);
                 komut.Parameters.AddWithValue("@soyad", textSoyad.Text);
@@ -80,8 +80,8 @@ namespace Proje
 
         private void btnAra_Click_1(object sender, EventArgs e)
         {
-            string sorgu = "select * from personel where ad like '%" + textAd.Text + "%' and rütbesi like '%" + textRutbe.Text + "%' and " +
-               "soyad like '%" + textSoyad.Text + "%' and sınıfı like '%" + textSinif.Text + "%' and sicili like '%" + textSicil.Text + "%'";
+            string sorgu = "select * from personel where ad like '%" + textAd.Text + "%' and RUTBESI like '%" + textRutbe.Text + "%' and " +
+               "soyad like '%" + textSoyad.Text + "%' and SINIFI like '%" + textSinif.Text + "%' and SICILI like '%" + textSicil.Text + "%'";
             SqlDataAdapter adtr2 = new SqlDataAdapter();
             dataGridView1.DataSource = personel.listele(adtr2, sorgu);
 
@@ -92,8 +92,8 @@ namespace Proje
             DialogResult i = MessageBox.Show("Personeli silmek istiyor musunuz?", "Remove Window", MessageBoxButtons.YesNo);
             if (i == DialogResult.Yes)
             {
-            string sorgu = "delete from personel where ad=@ad and soyad=@soyad and sınıfı = @sınıfı" +
-                " and rütbesi=@rütbesi and sicili = @sicili";
+            string sorgu = "delete from personel where ad=@ad and soyad=@soyad and SINIFI = @sınıfı" +
+                " and RUTBESI=@rütbesi and SICILI = @sicili";
             SqlCommand komut2 = new SqlCommand();
             komut2.Parameters.AddWithValue("@ad", textAd.Text);
             komut2.Parameters.AddWithValue("@soyad", textSoyad.Text);

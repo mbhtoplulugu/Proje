@@ -36,7 +36,25 @@ namespace Proje
             baglanti.Close();
             return tablo;
         }
-        public void bosAraclar(ComboBox combo1, ComboBox combo2, ComboBox combo3, string sorgu)
+        public void Araclar(ComboBox combo1, string sorgu)
+        {
+            combo1.Items.Clear();
+
+            if (baglanti.State != ConnectionState.Open)
+            {
+                baglanti.Close();
+                baglanti.Open();
+            }
+            SqlCommand komut = new SqlCommand(sorgu, baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+            while (read.Read())
+            {
+                combo1.Items.Add(read["PLAKA"].ToString());
+
+            }
+            baglanti.Close();
+        }
+        public void bosAraclar( ComboBox combo1, ComboBox combo2, ComboBox combo3, string sorgu)
         {
             combo1.Items.Clear();
             combo2.Items.Clear();
@@ -51,7 +69,6 @@ namespace Proje
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
-                
                 combo1.Items.Add(read["PLAKA"].ToString());
                 combo2.Items.Add(read["MARKA"].ToString());
                 combo3.Items.Add(read["SERI"].ToString());
@@ -73,9 +90,9 @@ namespace Proje
             {
                 txt1.Text = read["ad"].ToString();
                 txt2.Text = read["soyad"].ToString();
-                txt3.Text = read["sınıfı"].ToString();
-                txt4.Text = read["rütbesi"].ToString();
-                txt5.Text = read["sicili"].ToString();
+                txt3.Text = read["SINIFI"].ToString();
+                txt4.Text = read["RUTBESI"].ToString();
+                txt5.Text = read["SICILI"].ToString();
             }
             baglanti.Close();
         }
