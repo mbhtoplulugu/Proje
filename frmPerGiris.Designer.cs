@@ -49,7 +49,6 @@
             this.textAdi.Name = "textAdi";
             this.textAdi.Size = new System.Drawing.Size(248, 30);
             this.textAdi.TabIndex = 0;
-            this.textAdi.TextChanged += new System.EventHandler(this.textAdi_TextChanged);
             // 
             // textSoyadi
             // 
@@ -58,7 +57,6 @@
             this.textSoyadi.Name = "textSoyadi";
             this.textSoyadi.Size = new System.Drawing.Size(248, 30);
             this.textSoyadi.TabIndex = 1;
-            this.textSoyadi.TextChanged += new System.EventHandler(this.textSoyadi_TextChanged);
             // 
             // textSinifi
             // 
@@ -67,7 +65,6 @@
             this.textSinifi.Name = "textSinifi";
             this.textSinifi.Size = new System.Drawing.Size(248, 30);
             this.textSinifi.TabIndex = 2;
-            this.textSinifi.TextChanged += new System.EventHandler(this.textSinifi_TextChanged);
             // 
             // textRutbesi
             // 
@@ -76,7 +73,6 @@
             this.textRutbesi.Name = "textRutbesi";
             this.textRutbesi.Size = new System.Drawing.Size(248, 30);
             this.textRutbesi.TabIndex = 3;
-            this.textRutbesi.TextChanged += new System.EventHandler(this.textRutbesi_TextChanged);
             // 
             // lblAdi
             // 
@@ -135,7 +131,6 @@
             this.textSicili.Name = "textSicili";
             this.textSicili.Size = new System.Drawing.Size(248, 30);
             this.textSicili.TabIndex = 8;
-            this.textSicili.TextChanged += new System.EventHandler(this.textSicili_TextChanged);
             // 
             // btnPerEkle
             // 

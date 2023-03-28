@@ -23,6 +23,8 @@ namespace Proje
         {
             string sorgu = "select * from arac where DURUM = 'BOŞ'";
             arac.bosAraclar(comboPlaka,comboMarka,comboSeri, sorgu);
+            string sorgu1 = "select * from arac";
+            arac.Araclar(comboKonvoyPlaka, sorgu1);
         }
 
         private void comboPlaka_SelectedIndexChanged(object sender, EventArgs e)
@@ -60,13 +62,14 @@ namespace Proje
 
         private void konvoyCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (konvoyCheck.Checked)
+            if (checkKonvoy.Checked)
             {
                 label6.Visible = true;
                 textKonvoy.Visible = true;
                 comboKonvoyPlaka.Visible = true;
                 label7.Visible = true;
                 btnKonAracEkle.Visible = true;
+                btnKonAracSil.Visible = true;
             }
             else
             {
@@ -75,38 +78,67 @@ namespace Proje
                 comboKonvoyPlaka.Visible = false;
                 label7.Visible = false;
                 btnKonAracEkle.Visible = false;
+                btnKonAracSil.Visible = false;
             }
         }
 
         private void btnPerAra_Click(object sender, EventArgs e)
         {
-            string sorgu = "select * from personel where ad like '%" + textAdi.Text + "%' and " +
-               "soyad like '%" + textSoyadi.Text + "%' and sınıfı like '%" + textSinifi.Text + "%' and sicili like '%" + textSicili.Text + "%'";
+            string sorgu = "select * from personel where AD like '%" + textAdi.Text + "%' and " +
+               "SOYAD like '%" + textSoyadi.Text + "%' and SINIFI like '%" + textSinifi.Text + "%' and SICILI like '%" + textSicili.Text + "%'";
             arac.PerGoster(textAdi, textSoyadi, textSinifi, textRutbesi, textSicili, sorgu);
         }
 
         private void btnGorev_Click(object sender, EventArgs e)
         {
             if(textAdi.Text.Length>0 && textSicili.Text.Length>0 && textSinifi.Text.Length>0) {
-                if (comboPlaka.Text.Length > 0)
+                if (comboPlaka.Text.Length > 0 || comboKonvoyPlaka.Text.Length> 0)
                 {
-// AYNI İSİMLİ KONVOY VAR MI KONTROL
-                    string sorgu1 = "update personel set konvoyID=@konvoyID where sicili = @sicili and sınıfı=@sınıfı ";
-                    string sorgu2 = "update araç set konvoyID=@konvoyID where PLAKA = @plaka ";
-                    string sorgu3 = "insert into konvoy(konvoyID,konvoyK,konvoyCikisTarihi,konvoyCikisSaati,konvoyDonusTarih,konvoyDonusSaati)" +
-                        " values (@konvoyID,@konvoyK,@konvoyCikisTarihi,@konvoyCikisSaati,@konvoyDonusTarih,@konvoyDonusSaati) ";
-                    SqlCommand komut = new SqlCommand();
-                    komut.Parameters.AddWithValue("@konvoyID", textAdi.Text);
-                    komut.Parameters.AddWithValue("@konvoyK", textSoyadi.Text);
-                    komut.Parameters.AddWithValue("@konvoyCikisTarihi", cikisGun.Text);
-                    komut.Parameters.AddWithValue("@konvoyCikisSaati", cikisZaman.Text);
-                    komut.Parameters.AddWithValue("@konvoyDonusTarih", donusGun.Text);
-                    komut.Parameters.AddWithValue("@konvoyDonusSaati", donusZaman.Text);
+                    if (checkKonvoy.Checked)
+                    {
+                        // AYNI İSİMLİ KONVOY VAR MI KONTROL
+                        string sorgu1 = "update personel set KONVOY_ID=@konvoyID where SICILI = @sicili and SINIFI=@sınıfı ";
+                        string sorgu2 = "insert into konvoy(KONVOY_ID,KONVOY_KOMUTANI,KONVOY_CIKIS_TARIHI,KONVOY_CIKIS_SAATI,KONVOY_DONUS_TARIHI,KONVOY_DONUS_SAATI)" +
+                            " values (@konvoyID,@konvoyK,@konvoyCikisTarihi,@konvoyCikisSaati,@konvoyDonusTarih,@konvoyDonusSaati) ";
+                        SqlCommand komut = new SqlCommand();
+                        komut.Parameters.AddWithValue("@konvoyID", textKonvoy.Text);
+                        komut.Parameters.AddWithValue("@konvoyK", textAdi.Text + " " + textSoyadi.Text + " " + textSinifi.Text + " " +
+                            textRutbesi.Text + " " + textSicili.Text);
+                        komut.Parameters.AddWithValue("@konvoyCikisTarihi", cikisGun.Text);
+                        komut.Parameters.AddWithValue("@konvoyCikisSaati", cikisZaman.Text);
+                        komut.Parameters.AddWithValue("@konvoyDonusTarih", donusGun.Text);
+                        komut.Parameters.AddWithValue("@konvoyDonusSaati", donusZaman.Text);
+                        komut.Parameters.AddWithValue("@sicili", textSicili.Text);
+                        komut.Parameters.AddWithValue("@sınıfı", textSinifi.Text);
 
-                    arac.ekle_sil_guncelle(komut, sorgu1);
-                    arac.ekle_sil_guncelle(komut, sorgu2);
-                    arac.ekle_sil_guncelle(komut, sorgu3);
-                    foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                        if (arac.baglanti.State != ConnectionState.Open)
+                        {
+                            arac.baglanti.Close();
+                            arac.baglanti.Open();
+                        }
+                        komut.Connection = arac.baglanti;
+                        komut.CommandText = sorgu1;
+                        komut.ExecuteNonQuery();
+                        komut.CommandText = sorgu2;
+                        komut.ExecuteNonQuery();
+                        arac.baglanti.Close();
+                    }
+                    else
+                    {
+                        string sorgu = "update arac set CIKIS_TARIHI = @CikisTarihi, CIKIS_SAATI = @CikisSaati, " +
+                "DONUS_TARIHI = @DonusTarih, DONUS_SAATI = @DonusSaati, " +
+                "DURUM= 'DOLU' where PLAKA = @plaka ";
+                        SqlCommand komut = new SqlCommand();
+                        komut.Parameters.AddWithValue("@plaka", comboKonvoyPlaka.Text);
+                        komut.Parameters.AddWithValue("@CikisTarihi", cikisGun.Text);
+                        komut.Parameters.AddWithValue("@CikisSaati", cikisZaman.Text);
+                        komut.Parameters.AddWithValue("@DonusTarih", donusGun.Text);
+                        komut.Parameters.AddWithValue("@DonusSaati", donusZaman.Text);
+                        arac.ekle_sil_guncelle(komut, sorgu);
+                    }
+                    MessageBox.Show("Görev Emri Tamamlandı", "Sonuç", MessageBoxButtons.OK);
+                    foreach (Control item in Controls) if (item is TextBox || item is ComboBox) item.Text = "";
+
                 }
                 else { MessageBox.Show("Lütfen Araç Seçiniz", "Hata Penceresi", MessageBoxButtons.OK); }
             }
@@ -118,10 +150,53 @@ namespace Proje
 
         private void btnKonAracEkle_Click(object sender, EventArgs e)
         {
-            string sorgu = "update araç set konvoyID=@konvoyID where PLAKA = @plaka ";
+            string sorgu = "update arac set CIKIS_TARIHI = @konvoyCikisTarihi, CIKIS_SAATI= @konvoyCikisSaati, " +
+                "DONUS_TARIHI=@konvoyDonusTarih,DONUS_SAATI=@konvoyDonusSaati, KONVOY_ID=@konvoyID, " +
+                "DURUM = 'DOLU' where PLAKA = @plaka ";
             SqlCommand komut = new SqlCommand();
+            komut.Parameters.AddWithValue("@konvoyID", textKonvoy.Text);
+            komut.Parameters.AddWithValue("@plaka", comboKonvoyPlaka.Text);
+            komut.Parameters.AddWithValue("@konvoyCikisTarihi", cikisGun.Text);
+            komut.Parameters.AddWithValue("@konvoyCikisSaati", cikisZaman.Text);
+            komut.Parameters.AddWithValue("@konvoyDonusTarih", donusGun.Text);
+            komut.Parameters.AddWithValue("@konvoyDonusSaati", donusZaman.Text);
             arac.ekle_sil_guncelle(komut, sorgu);
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+
+            MessageBox.Show("Araç Konvoya Eklendi", "Sonuç", MessageBoxButtons.OK);
+
+            foreach (Control item in Controls) if (item is TextBox || item is ComboBox) item.Text = "";
+        }
+
+        private void btnAracListele_Click(object sender, EventArgs e)
+        {
+            string sorgu = "select * from arac where DURUM like '%DOLU%' ";
+            SqlDataAdapter adtr2 = new SqlDataAdapter();
+            dataGridView1.DataSource = arac.listele(adtr2, sorgu);
+        }
+
+        private void btnKonvoyListele_Click(object sender, EventArgs e)
+        {
+            string sorgu = "select * from konvoy ";
+            SqlDataAdapter adtr2 = new SqlDataAdapter();
+            dataGridView1.DataSource = arac.listele(adtr2, sorgu);
+        }
+
+        private void btnKonAracSil_Click(object sender, EventArgs e)
+        {
+            DialogResult i = MessageBox.Show("Aracı Konvoydan Çıkarmak istediğinizden Emin misiniz?", "Uyarı", MessageBoxButtons.YesNo);
+            if (i == DialogResult.Yes)
+            {
+                string sorgu = "update arac set CIKIS_TARIHI = '', CIKIS_SAATI= '', DONUS_TARIHI='', " +
+                "DONUS_SAATI='', KONVOY_ID='', DURUM = 'BOŞ' where PLAKA = @plaka ";
+               
+                SqlCommand komut = new SqlCommand();
+                komut.Parameters.AddWithValue("@plaka", comboKonvoyPlaka.Text);
+                arac.ekle_sil_guncelle(komut, sorgu);
+
+                MessageBox.Show("Araç Konvoydan Silindi", "Sonuç", MessageBoxButtons.OK);
+
+                foreach (Control item in Controls) if (item is ComboBox) item.Text = "";
+            }
         }
     }
 }

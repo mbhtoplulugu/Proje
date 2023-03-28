@@ -43,7 +43,10 @@
             this.textSoyadi = new System.Windows.Forms.TextBox();
             this.textAdi = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.konvoyCheck = new System.Windows.Forms.CheckBox();
+            this.checkKonvoy = new System.Windows.Forms.CheckBox();
+            this.btnAracListele = new System.Windows.Forms.Button();
+            this.btnKonvoyListele = new System.Windows.Forms.Button();
+            this.btnKonAracSil = new System.Windows.Forms.Button();
             this.btnKonAracEkle = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnGorev = new System.Windows.Forms.Button();
@@ -103,7 +106,7 @@
             // btnTemizle
             // 
             this.btnTemizle.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnTemizle.Location = new System.Drawing.Point(83, 172);
+            this.btnTemizle.Location = new System.Drawing.Point(83, 170);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(65, 35);
             this.btnTemizle.TabIndex = 18;
@@ -114,7 +117,7 @@
             // btnPerAra
             // 
             this.btnPerAra.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPerAra.Location = new System.Drawing.Point(154, 172);
+            this.btnPerAra.Location = new System.Drawing.Point(154, 170);
             this.btnPerAra.Name = "btnPerAra";
             this.btnPerAra.Size = new System.Drawing.Size(117, 35);
             this.btnPerAra.TabIndex = 18;
@@ -214,7 +217,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.konvoyCheck);
+            this.groupBox2.Controls.Add(this.checkKonvoy);
+            this.groupBox2.Controls.Add(this.btnAracListele);
+            this.groupBox2.Controls.Add(this.btnKonvoyListele);
+            this.groupBox2.Controls.Add(this.btnKonAracSil);
             this.groupBox2.Controls.Add(this.btnKonAracEkle);
             this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Controls.Add(this.btnGorev);
@@ -235,35 +241,69 @@
             this.groupBox2.Controls.Add(this.comboKonvoyPlaka);
             this.groupBox2.Controls.Add(this.comboPlaka);
             this.groupBox2.Controls.Add(this.comboMarka);
-            this.groupBox2.Location = new System.Drawing.Point(297, 12);
+            this.groupBox2.Location = new System.Drawing.Point(297, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(498, 200);
+            this.groupBox2.Size = new System.Drawing.Size(498, 207);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Araç-Konvoy Bilgileri";
             // 
-            // konvoyCheck
+            // checkKonvoy
             // 
-            this.konvoyCheck.AutoSize = true;
-            this.konvoyCheck.BackColor = System.Drawing.Color.PaleGreen;
-            this.konvoyCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.konvoyCheck.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.konvoyCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.konvoyCheck.Location = new System.Drawing.Point(290, 19);
-            this.konvoyCheck.Name = "konvoyCheck";
-            this.konvoyCheck.Size = new System.Drawing.Size(199, 21);
-            this.konvoyCheck.TabIndex = 21;
-            this.konvoyCheck.Text = "Konvoy Oluşturulacak mı?";
-            this.konvoyCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.konvoyCheck.UseVisualStyleBackColor = false;
-            this.konvoyCheck.CheckedChanged += new System.EventHandler(this.konvoyCheck_CheckedChanged);
+            this.checkKonvoy.AutoSize = true;
+            this.checkKonvoy.BackColor = System.Drawing.Color.PaleGreen;
+            this.checkKonvoy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkKonvoy.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.checkKonvoy.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkKonvoy.Location = new System.Drawing.Point(284, 14);
+            this.checkKonvoy.Name = "checkKonvoy";
+            this.checkKonvoy.Size = new System.Drawing.Size(211, 21);
+            this.checkKonvoy.TabIndex = 21;
+            this.checkKonvoy.Text = "Konvoy Oluşturulacak mı ?  ";
+            this.checkKonvoy.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkKonvoy.UseVisualStyleBackColor = false;
+            this.checkKonvoy.CheckedChanged += new System.EventHandler(this.konvoyCheck_CheckedChanged);
+            // 
+            // btnAracListele
+            // 
+            this.btnAracListele.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAracListele.Location = new System.Drawing.Point(266, 170);
+            this.btnAracListele.Name = "btnAracListele";
+            this.btnAracListele.Size = new System.Drawing.Size(109, 35);
+            this.btnAracListele.TabIndex = 18;
+            this.btnAracListele.Text = "Araç Listele";
+            this.btnAracListele.UseVisualStyleBackColor = false;
+            this.btnAracListele.Click += new System.EventHandler(this.btnAracListele_Click);
+            // 
+            // btnKonvoyListele
+            // 
+            this.btnKonvoyListele.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnKonvoyListele.Location = new System.Drawing.Point(390, 171);
+            this.btnKonvoyListele.Name = "btnKonvoyListele";
+            this.btnKonvoyListele.Size = new System.Drawing.Size(108, 35);
+            this.btnKonvoyListele.TabIndex = 18;
+            this.btnKonvoyListele.Text = "Konvoy Listele";
+            this.btnKonvoyListele.UseVisualStyleBackColor = false;
+            this.btnKonvoyListele.Click += new System.EventHandler(this.btnKonvoyListele_Click);
+            // 
+            // btnKonAracSil
+            // 
+            this.btnKonAracSil.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnKonAracSil.Location = new System.Drawing.Point(285, 104);
+            this.btnKonAracSil.Name = "btnKonAracSil";
+            this.btnKonAracSil.Size = new System.Drawing.Size(92, 47);
+            this.btnKonAracSil.TabIndex = 18;
+            this.btnKonAracSil.Text = "Konvodan Araç Sil";
+            this.btnKonAracSil.UseVisualStyleBackColor = false;
+            this.btnKonAracSil.Visible = false;
+            this.btnKonAracSil.Click += new System.EventHandler(this.btnKonAracSil_Click);
             // 
             // btnKonAracEkle
             // 
             this.btnKonAracEkle.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnKonAracEkle.Location = new System.Drawing.Point(377, 107);
+            this.btnKonAracEkle.Location = new System.Drawing.Point(404, 104);
             this.btnKonAracEkle.Name = "btnKonAracEkle";
-            this.btnKonAracEkle.Size = new System.Drawing.Size(121, 35);
+            this.btnKonAracEkle.Size = new System.Drawing.Size(92, 47);
             this.btnKonAracEkle.TabIndex = 18;
             this.btnKonAracEkle.Text = "Konvoya Araç Ekle";
             this.btnKonAracEkle.UseVisualStyleBackColor = false;
@@ -273,9 +313,9 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnRefresh.Location = new System.Drawing.Point(0, 165);
+            this.btnRefresh.Location = new System.Drawing.Point(6, 171);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(65, 35);
+            this.btnRefresh.Size = new System.Drawing.Size(65, 34);
             this.btnRefresh.TabIndex = 18;
             this.btnRefresh.Text = "Yenile";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -283,12 +323,14 @@
             // 
             // btnGorev
             // 
-            this.btnGorev.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnGorev.Location = new System.Drawing.Point(423, 165);
+            this.btnGorev.BackColor = System.Drawing.Color.Firebrick;
+            this.btnGorev.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGorev.ForeColor = System.Drawing.Color.Cyan;
+            this.btnGorev.Location = new System.Drawing.Point(77, 170);
             this.btnGorev.Name = "btnGorev";
-            this.btnGorev.Size = new System.Drawing.Size(75, 35);
+            this.btnGorev.Size = new System.Drawing.Size(104, 35);
             this.btnGorev.TabIndex = 18;
-            this.btnGorev.Text = "Göreve Çık";
+            this.btnGorev.Text = "Görevlendir";
             this.btnGorev.UseVisualStyleBackColor = false;
             this.btnGorev.Click += new System.EventHandler(this.btnGorev_Click);
             // 
@@ -374,10 +416,10 @@
             // 
             // textKonvoy
             // 
-            this.textKonvoy.Location = new System.Drawing.Point(374, 45);
+            this.textKonvoy.Location = new System.Drawing.Point(377, 41);
             this.textKonvoy.Multiline = true;
             this.textKonvoy.Name = "textKonvoy";
-            this.textKonvoy.Size = new System.Drawing.Size(121, 24);
+            this.textKonvoy.Size = new System.Drawing.Size(118, 24);
             this.textKonvoy.TabIndex = 20;
             this.textKonvoy.Visible = false;
             // 
@@ -386,7 +428,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.PaleGreen;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(284, 50);
+            this.label6.Location = new System.Drawing.Point(284, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 13;
@@ -398,7 +440,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.PaleGreen;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(285, 84);
+            this.label7.Location = new System.Drawing.Point(284, 73);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(90, 17);
             this.label7.TabIndex = 13;
@@ -427,12 +469,11 @@
             // comboKonvoyPlaka
             // 
             this.comboKonvoyPlaka.FormattingEnabled = true;
-            this.comboKonvoyPlaka.Location = new System.Drawing.Point(377, 79);
+            this.comboKonvoyPlaka.Location = new System.Drawing.Point(377, 71);
             this.comboKonvoyPlaka.Name = "comboKonvoyPlaka";
-            this.comboKonvoyPlaka.Size = new System.Drawing.Size(121, 23);
+            this.comboKonvoyPlaka.Size = new System.Drawing.Size(118, 23);
             this.comboKonvoyPlaka.TabIndex = 11;
             this.comboKonvoyPlaka.Visible = false;
-            this.comboKonvoyPlaka.SelectedIndexChanged += new System.EventHandler(this.comboPlaka_SelectedIndexChanged);
             // 
             // comboPlaka
             // 
@@ -505,11 +546,14 @@
         private Button btnPerAra;
         private Button btnTemizle;
         private Button btnRefresh;
-        private CheckBox konvoyCheck;
+        private CheckBox checkKonvoy;
         private TextBox textKonvoy;
         private Label label6;
         private Button btnKonAracEkle;
         private Label label7;
         private ComboBox comboKonvoyPlaka;
+        private Button btnKonvoyListele;
+        private Button btnAracListele;
+        private Button btnKonAracSil;
     }
 }
