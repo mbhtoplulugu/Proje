@@ -12,7 +12,7 @@ namespace Proje
     {
         //alttaki kotları ne kadar connection istiyorsak o kadar çok kopyalayacağız
 
-        public SqlConnection baglanti = new SqlConnection("Data Source=TB701-5863;Initial Catalog=Ulastirma;Integrated Security=True;MultipleActiveResultSets=True");
+        public SqlConnection baglanti = new SqlConnection("Data Source=TB701-5887;Initial Catalog=Ulastirma;Integrated Security=True;MultipleActiveResultSets=True");
         DataTable tablo =new DataTable();
     
     public void ekle_sil_guncelle(SqlCommand komut, string sorgu)

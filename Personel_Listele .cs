@@ -39,6 +39,7 @@ namespace Proje
             string sorgu = "select * from personel";
             SqlDataAdapter adtr2 = new SqlDataAdapter();
             dataGridView1.DataSource = personel.listele(adtr2, sorgu);
+            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
         }
 
         private void btnIptal_Click(object sender, EventArgs e)
@@ -62,8 +63,8 @@ namespace Proje
             DialogResult i = MessageBox.Show("Personelin verileri geri dönmemek üzere değiştirilecektir. \nDevam etmek istiyor musunuz?", "Remove Window", MessageBoxButtons.YesNo);
             if (i == DialogResult.Yes)
             {
-                string sorgu = "update personel set ad=@ad, soyad=@soyad, SINIFI=@sınıfı, RUTBESI=@rütbesi, sicili=@sicili where " +
-                                "SICILI = @sicili and sınıfı=@sınıfı ";
+                string sorgu = "update personel set ad=@ad, soyad=@soyad, SINIFI=@sınıfı, RUTBESI=@rütbesi, SICILI=@sicili " +
+                                " where SICILI = @sicili and SINIFI=@sınıfı ";
                 SqlCommand komut = new SqlCommand();
                 komut.Parameters.AddWithValue("@ad", textAd.Text);
                 komut.Parameters.AddWithValue("@soyad", textSoyad.Text);
@@ -84,6 +85,7 @@ namespace Proje
                "soyad like '%" + textSoyad.Text + "%' and SINIFI like '%" + textSinif.Text + "%' and SICILI like '%" + textSicil.Text + "%'";
             SqlDataAdapter adtr2 = new SqlDataAdapter();
             dataGridView1.DataSource = personel.listele(adtr2, sorgu);
+            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
 
         }
 
@@ -92,19 +94,13 @@ namespace Proje
             DialogResult i = MessageBox.Show("Personeli silmek istiyor musunuz?", "Remove Window", MessageBoxButtons.YesNo);
             if (i == DialogResult.Yes)
             {
-            string sorgu = "delete from personel where ad=@ad and soyad=@soyad and SINIFI = @sınıfı" +
-                " and RUTBESI=@rütbesi and SICILI = @sicili";
-            SqlCommand komut2 = new SqlCommand();
-            komut2.Parameters.AddWithValue("@ad", textAd.Text);
-            komut2.Parameters.AddWithValue("@soyad", textSoyad.Text);
-            komut2.Parameters.AddWithValue("@sınıfı", textSinif.Text);
-            komut2.Parameters.AddWithValue("@rütbesi", textRutbe.Text);
-            komut2.Parameters.AddWithValue("@sicili", textSicil.Text);
-            personel.ekle_sil_guncelle(komut2, sorgu);
-            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            personel.ekle_sil_guncelle(komut2, sorgu);
-            YenileListele();
-
+                DataGridViewRow satır = dataGridView1.CurrentRow;
+                string cümle = " delete from personel where RUTBESI = '" + satır.Cells["RUTBESI"].Value.ToString() + "' and " +
+                    "SICILI = '" + satır.Cells["SICILI"].Value.ToString() + "'";
+                SqlCommand komut2 = new SqlCommand();
+                personel.ekle_sil_guncelle(komut2, cümle);
+                foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                YenileListele();
             }
 
         }
