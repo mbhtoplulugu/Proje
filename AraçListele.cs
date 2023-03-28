@@ -55,7 +55,10 @@ namespace Proje
             komut2.Parameters.AddWithValue("@KM", KMtxt.Text);
             komut2.Parameters.AddWithValue("@YAKIT", YAKITcombo.Text);
             komut2.Parameters.AddWithValue("@TARIH", DateTime.Now.ToString());
+            AracTahsis.ekle_sil_guncelle(komut2, cümle);
+            foreach (Control item in Controls) if (item is TextBox) item.Text = "";
 
+            YenileAraçlarListele();
         }
     }
 }

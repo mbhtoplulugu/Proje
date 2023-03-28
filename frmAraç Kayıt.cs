@@ -90,20 +90,26 @@ namespace Proje
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string cumle = "insert into arac (PLAKA,MARKA,SERI,YIL,KM,YAKIT,TARIH,DURUM) values (@PLAKA,@MARKA,@SERI,@YIL,@KM,@YAKIT,@TARIH,@DURUM)";
-            SqlCommand komut2 = new SqlCommand();
-            komut2.Parameters.AddWithValue("@PLAKA", PLAKAtxt.Text);
-            komut2.Parameters.AddWithValue("@MARKA", MARKAcombo.Text);
-            komut2.Parameters.AddWithValue("@SERI", SERIcombo.Text);
-            komut2.Parameters.AddWithValue("@YIL", YILtxt.Text);
-            komut2.Parameters.AddWithValue("@KM", KMtxt.Text);
-            komut2.Parameters.AddWithValue("@YAKIT", YAKITcombo.Text);
-            komut2.Parameters.AddWithValue("@TARIH", DateTime.Now.ToString());
-            komut2.Parameters.AddWithValue("@DURUM", "BOŞ");
-            AracTahsis.ekle_sil_guncelle(komut2,cumle);
-            SERIcombo.Items.Clear();    
-            foreach (Control Item in Controls) if (Item is TextBox) Item.Text= " ";
-            foreach (Control Item in Controls) if (Item is ComboBox) Item.Text = " ";
+            if (PLAKAtxt.Text.Length > 0) {
+                string cumle = "insert into arac (PLAKA,MARKA,SERI,YIL,KM,YAKIT,TARIH,DURUM) values (@PLAKA,@MARKA,@SERI,@YIL,@KM,@YAKIT,@TARIH,@DURUM)";
+                SqlCommand komut2 = new SqlCommand();
+                komut2.Parameters.AddWithValue("@PLAKA", PLAKAtxt.Text);
+                komut2.Parameters.AddWithValue("@MARKA", MARKAcombo.Text);
+                komut2.Parameters.AddWithValue("@SERI", SERIcombo.Text);
+                komut2.Parameters.AddWithValue("@YIL", YILtxt.Text);
+                komut2.Parameters.AddWithValue("@KM", KMtxt.Text);
+                komut2.Parameters.AddWithValue("@YAKIT", YAKITcombo.Text);
+                komut2.Parameters.AddWithValue("@TARIH", DateTime.Now.ToString());
+                komut2.Parameters.AddWithValue("@DURUM", "BOŞ");
+                AracTahsis.ekle_sil_guncelle(komut2, cumle);
+                SERIcombo.Items.Clear();
+                foreach (Control Item in Controls) if (Item is TextBox) Item.Text = " ";
+                foreach (Control Item in Controls) if (Item is ComboBox) Item.Text = " ";
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Aracın Plakasını Giriniz.", "Hata Penceresi", MessageBoxButtons.OK);
+            }
 
         }
 

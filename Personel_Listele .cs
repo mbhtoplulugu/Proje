@@ -64,14 +64,14 @@ namespace Proje
             {
                 string sorgu = "update personel set ad=@ad, soyad=@soyad, sınıfı=@sınıfı, rütbesi=@rütbesi, sicili=@sicili where " +
                                 "sicili = @sicili and sınıfı=@sınıfı ";
-                SqlCommand komut2 = new SqlCommand();
-                komut2.Parameters.AddWithValue("@ad", textAd.Text);
-                komut2.Parameters.AddWithValue("@soyad", textSoyad.Text);
-                komut2.Parameters.AddWithValue("@sınıfı", textSinif.Text);
-                komut2.Parameters.AddWithValue("@rütbesi", textRutbe.Text);
-                komut2.Parameters.AddWithValue("@sicili", textSicil.Text);
+                SqlCommand komut = new SqlCommand();
+                komut.Parameters.AddWithValue("@ad", textAd.Text);
+                komut.Parameters.AddWithValue("@soyad", textSoyad.Text);
+                komut.Parameters.AddWithValue("@sınıfı", textSinif.Text);
+                komut.Parameters.AddWithValue("@rütbesi", textRutbe.Text);
+                komut.Parameters.AddWithValue("@sicili", textSicil.Text);
                 
-                personel.ekle_sil_guncelle(komut2, sorgu);
+                personel.ekle_sil_guncelle(komut, sorgu);
                 foreach (Control item in Controls) if (item is TextBox) item.Text = "";
                 
                 YenileListele();
@@ -80,8 +80,8 @@ namespace Proje
 
         private void btnAra_Click_1(object sender, EventArgs e)
         {
-            string sorgu = "select * from personel where ad like '%" + textAd.Text + "%' " +
-                "and soyad like '%" + textSoyad.Text + "%'and sicili like '%" + textSicil.Text + "%' ";
+            string sorgu = "select * from personel where ad like '%" + textAd.Text + "%' and rütbesi like '%" + textRutbe.Text + "%' and " +
+               "soyad like '%" + textSoyad.Text + "%' and sınıfı like '%" + textSinif.Text + "%' and sicili like '%" + textSicil.Text + "%'";
             SqlDataAdapter adtr2 = new SqlDataAdapter();
             dataGridView1.DataSource = personel.listele(adtr2, sorgu);
 

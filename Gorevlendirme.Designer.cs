@@ -31,7 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTemizle = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPerAra = new System.Windows.Forms.Button();
             this.lblSicili = new System.Windows.Forms.Label();
             this.textSicili = new System.Windows.Forms.TextBox();
             this.lblRutbesi = new System.Windows.Forms.Label();
@@ -43,19 +43,25 @@
             this.textSoyadi = new System.Windows.Forms.TextBox();
             this.textAdi = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.konvoyCheck = new System.Windows.Forms.CheckBox();
+            this.btnKonAracEkle = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.btnGorev = new System.Windows.Forms.Button();
+            this.donusGun = new System.Windows.Forms.DateTimePicker();
+            this.donusZaman = new System.Windows.Forms.DateTimePicker();
+            this.cikisZaman = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cikisGun = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textKonvoy = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboSeri = new System.Windows.Forms.ComboBox();
+            this.comboKonvoyPlaka = new System.Windows.Forms.ComboBox();
             this.comboPlaka = new System.Windows.Forms.ComboBox();
             this.comboMarka = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,7 +82,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnTemizle);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnPerAra);
             this.groupBox1.Controls.Add(this.lblSicili);
             this.groupBox1.Controls.Add(this.textSicili);
             this.groupBox1.Controls.Add(this.lblRutbesi);
@@ -93,11 +99,10 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personel Bilgileri";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnTemizle
             // 
-            this.btnTemizle.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTemizle.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTemizle.Location = new System.Drawing.Point(83, 172);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(65, 35);
@@ -106,16 +111,16 @@
             this.btnTemizle.UseVisualStyleBackColor = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click_1);
             // 
-            // button2
+            // btnPerAra
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(154, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 35);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Personel Ara";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.btnPerAra.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPerAra.Location = new System.Drawing.Point(154, 172);
+            this.btnPerAra.Name = "btnPerAra";
+            this.btnPerAra.Size = new System.Drawing.Size(117, 35);
+            this.btnPerAra.TabIndex = 18;
+            this.btnPerAra.Text = "Personel Ara";
+            this.btnPerAra.UseVisualStyleBackColor = false;
+            this.btnPerAra.Click += new System.EventHandler(this.btnPerAra_Click);
             // 
             // lblSicili
             // 
@@ -134,7 +139,6 @@
             this.textSicili.Name = "textSicili";
             this.textSicili.Size = new System.Drawing.Size(188, 24);
             this.textSicili.TabIndex = 28;
-            this.textSicili.TextChanged += new System.EventHandler(this.textSicili_TextChanged);
             // 
             // lblRutbesi
             // 
@@ -207,23 +211,28 @@
             this.textAdi.Name = "textAdi";
             this.textAdi.Size = new System.Drawing.Size(188, 24);
             this.textAdi.TabIndex = 20;
-            this.textAdi.TextChanged += new System.EventHandler(this.textAdi_TextChanged);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.konvoyCheck);
+            this.groupBox2.Controls.Add(this.btnKonAracEkle);
             this.groupBox2.Controls.Add(this.btnRefresh);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker5);
-            this.groupBox2.Controls.Add(this.dateTimePicker4);
+            this.groupBox2.Controls.Add(this.btnGorev);
+            this.groupBox2.Controls.Add(this.donusGun);
+            this.groupBox2.Controls.Add(this.donusZaman);
+            this.groupBox2.Controls.Add(this.cikisZaman);
             this.groupBox2.Controls.Add(this.dateTimePicker3);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.cikisGun);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.textKonvoy);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.comboSeri);
+            this.groupBox2.Controls.Add(this.comboKonvoyPlaka);
             this.groupBox2.Controls.Add(this.comboPlaka);
             this.groupBox2.Controls.Add(this.comboMarka);
             this.groupBox2.Location = new System.Drawing.Point(297, 12);
@@ -233,9 +242,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
+            // konvoyCheck
+            // 
+            this.konvoyCheck.AutoSize = true;
+            this.konvoyCheck.BackColor = System.Drawing.Color.PaleGreen;
+            this.konvoyCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.konvoyCheck.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.konvoyCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.konvoyCheck.Location = new System.Drawing.Point(290, 19);
+            this.konvoyCheck.Name = "konvoyCheck";
+            this.konvoyCheck.Size = new System.Drawing.Size(199, 21);
+            this.konvoyCheck.TabIndex = 21;
+            this.konvoyCheck.Text = "Konvoy Oluşturulacak mı?";
+            this.konvoyCheck.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.konvoyCheck.UseVisualStyleBackColor = false;
+            this.konvoyCheck.CheckedChanged += new System.EventHandler(this.konvoyCheck_CheckedChanged);
+            // 
+            // btnKonAracEkle
+            // 
+            this.btnKonAracEkle.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnKonAracEkle.Location = new System.Drawing.Point(377, 107);
+            this.btnKonAracEkle.Name = "btnKonAracEkle";
+            this.btnKonAracEkle.Size = new System.Drawing.Size(121, 35);
+            this.btnKonAracEkle.TabIndex = 18;
+            this.btnKonAracEkle.Text = "Konvoya Araç Ekle";
+            this.btnKonAracEkle.UseVisualStyleBackColor = false;
+            this.btnKonAracEkle.Visible = false;
+            this.btnKonAracEkle.Click += new System.EventHandler(this.btnKonAracEkle_Click);
+            // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnRefresh.Location = new System.Drawing.Point(0, 165);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(65, 35);
@@ -244,40 +281,40 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // button1
+            // btnGorev
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(423, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Göreve Çık";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGorev.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnGorev.Location = new System.Drawing.Point(423, 165);
+            this.btnGorev.Name = "btnGorev";
+            this.btnGorev.Size = new System.Drawing.Size(75, 35);
+            this.btnGorev.TabIndex = 18;
+            this.btnGorev.Text = "Göreve Çık";
+            this.btnGorev.UseVisualStyleBackColor = false;
+            this.btnGorev.Click += new System.EventHandler(this.btnGorev_Click);
             // 
-            // dateTimePicker2
+            // donusGun
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(98, 133);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(73, 23);
-            this.dateTimePicker2.TabIndex = 17;
+            this.donusGun.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.donusGun.Location = new System.Drawing.Point(98, 133);
+            this.donusGun.Name = "donusGun";
+            this.donusGun.Size = new System.Drawing.Size(73, 23);
+            this.donusGun.TabIndex = 17;
             // 
-            // dateTimePicker5
+            // donusZaman
             // 
-            this.dateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker5.Location = new System.Drawing.Point(177, 133);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(73, 23);
-            this.dateTimePicker5.TabIndex = 16;
+            this.donusZaman.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.donusZaman.Location = new System.Drawing.Point(177, 133);
+            this.donusZaman.Name = "donusZaman";
+            this.donusZaman.Size = new System.Drawing.Size(73, 23);
+            this.donusZaman.TabIndex = 16;
             // 
-            // dateTimePicker4
+            // cikisZaman
             // 
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker4.Location = new System.Drawing.Point(177, 104);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(73, 23);
-            this.dateTimePicker4.TabIndex = 16;
+            this.cikisZaman.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.cikisZaman.Location = new System.Drawing.Point(177, 104);
+            this.cikisZaman.Name = "cikisZaman";
+            this.cikisZaman.Size = new System.Drawing.Size(73, 23);
+            this.cikisZaman.TabIndex = 16;
             // 
             // dateTimePicker3
             // 
@@ -287,13 +324,13 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(73, 23);
             this.dateTimePicker3.TabIndex = 16;
             // 
-            // dateTimePicker1
+            // cikisGun
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(98, 104);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(73, 23);
-            this.dateTimePicker1.TabIndex = 16;
+            this.cikisGun.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cikisGun.Location = new System.Drawing.Point(98, 104);
+            this.cikisGun.Name = "cikisGun";
+            this.cikisGun.Size = new System.Drawing.Size(73, 23);
+            this.cikisGun.TabIndex = 16;
             // 
             // label5
             // 
@@ -335,6 +372,39 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Marka";
             // 
+            // textKonvoy
+            // 
+            this.textKonvoy.Location = new System.Drawing.Point(374, 45);
+            this.textKonvoy.Multiline = true;
+            this.textKonvoy.Name = "textKonvoy";
+            this.textKonvoy.Size = new System.Drawing.Size(121, 24);
+            this.textKonvoy.TabIndex = 20;
+            this.textKonvoy.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.PaleGreen;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(284, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 17);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Konvoy ID";
+            this.label6.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.PaleGreen;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(285, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 17);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Araç Plakası";
+            this.label7.Visible = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -353,6 +423,16 @@
             this.comboSeri.Size = new System.Drawing.Size(121, 23);
             this.comboSeri.TabIndex = 12;
             this.comboSeri.SelectedIndexChanged += new System.EventHandler(this.comboSeri_SelectedIndexChanged);
+            // 
+            // comboKonvoyPlaka
+            // 
+            this.comboKonvoyPlaka.FormattingEnabled = true;
+            this.comboKonvoyPlaka.Location = new System.Drawing.Point(377, 79);
+            this.comboKonvoyPlaka.Name = "comboKonvoyPlaka";
+            this.comboKonvoyPlaka.Size = new System.Drawing.Size(121, 23);
+            this.comboKonvoyPlaka.TabIndex = 11;
+            this.comboKonvoyPlaka.Visible = false;
+            this.comboKonvoyPlaka.SelectedIndexChanged += new System.EventHandler(this.comboPlaka_SelectedIndexChanged);
             // 
             // comboPlaka
             // 
@@ -413,17 +493,23 @@
         private Label label1;
         private ComboBox comboSeri;
         private ComboBox comboMarka;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker5;
-        private DateTimePicker dateTimePicker4;
+        private DateTimePicker donusGun;
+        private DateTimePicker donusZaman;
+        private DateTimePicker cikisZaman;
         private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker cikisGun;
         private Label label5;
         private Label label4;
-        private Button button1;
+        private Button btnGorev;
         private ComboBox comboPlaka;
-        private Button button2;
+        private Button btnPerAra;
         private Button btnTemizle;
         private Button btnRefresh;
+        private CheckBox konvoyCheck;
+        private TextBox textKonvoy;
+        private Label label6;
+        private Button btnKonAracEkle;
+        private Label label7;
+        private ComboBox comboKonvoyPlaka;
     }
 }
