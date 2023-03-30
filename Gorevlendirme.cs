@@ -86,12 +86,12 @@ namespace Proje
         {
             string sorgu = "select * from personel where AD like '%" + textAdi.Text + "%' and " +
                "SOYAD like '%" + textSoyadi.Text + "%' and SINIFI like '%" + textSinifi.Text + "%' and SICILI like '%" + textSicili.Text + "%'";
-            arac.PerGoster(textAdi, textSoyadi, textSinifi, textRutbesi, textSicili, sorgu);
+            arac.PerGoster(textTel, textAdi, textSoyadi, textSinifi, textRutbesi, textSicili,  sorgu);
         }
 
         private void btnGorev_Click(object sender, EventArgs e)
         {
-            if(textAdi.Text.Length>0 && textSicili.Text.Length>0 && textSinifi.Text.Length>0) {
+            if(textAdi.Text.Length>0 && textSicili.Text.Length>0 && textSinifi.Text.Length>0 && textTel.Text.Length > 0) {
                 if (comboPlaka.Text.Length > 0 || comboKonvoyPlaka.Text.Length> 0)
                 {
                     if (checkKonvoy.Checked)
@@ -99,8 +99,8 @@ namespace Proje
                         
                         // AYNI İSİMLİ KONVOY VAR MI KONTROL
                         string sorgu1 = "update personel set KONVOY_ID=@konvoyID where SICILI = @sicili and SINIFI=@sınıfı ";
-                        string sorgu2 = "insert into Konvoy (KONVOY_ID, KONVOY_KOMUTANI, KONVOY_CIKIS_TARIHI, KONVOY_CIKIS_SAATI, KONVOY_DONUS_TARIHI, KONVOY_DONUS_SAATI)" +
-                            " values (@konvoyID, @konvoyK, @konvoyCikisTarihi, @konvoyCikisSaati, @konvoyDonusTarih, @konvoyDonusSaati) ";
+                        string sorgu2 = "insert into Konvoy (KONVOY_ID, KONVOY_K_,KONVOY_K_TEL_NO, CIKIS_TARIHI, CIKIS_SAATI, DONUS_TARIHI, DONUS_SAATI)" +
+                            " values (@konvoyID, @konvoyK,@tel, @konvoyCikisTarihi, @konvoyCikisSaati, @konvoyDonusTarih, @konvoyDonusSaati) ";
                         SqlCommand komut = new SqlCommand();
                         komut.Parameters.AddWithValue("@konvoyID", textKonvoy.Text);
                         komut.Parameters.AddWithValue("@konvoyK", textSinifi.Text + " " + textRutbesi.Text + " " + textAdi.Text + " " + textSoyadi.Text + " " + textSicili.Text);
@@ -110,7 +110,7 @@ namespace Proje
                         komut.Parameters.AddWithValue("@konvoyDonusSaati", donusZaman.Text);
                         komut.Parameters.AddWithValue("@sicili", textSicili.Text);
                         komut.Parameters.AddWithValue("@sınıfı", textSinifi.Text);
-
+                        komut.Parameters.AddWithValue("@tel", textTel.Text);
                         if (arac.baglanti.State != ConnectionState.Open)
                         {
                             arac.baglanti.Close();
@@ -126,13 +126,15 @@ namespace Proje
                     else
                     {
                         string sorgu = "update arac set CIKIS_TARIHI = @CikisTarihi, CIKIS_SAATI = @CikisSaati, " +
-                            "DONUS_TARIHI = @DonusTarih, DONUS_SAATI = @DonusSaati,DURUM= 'DOLU' where PLAKA = @plaka ";
+                            "DONUS_TARIHI = @DonusTarih, DONUS_SAATI = @DonusSaati,DURUM= 'DOLU', ARAC_KOMUTANI=@aracK, ARAC_K_TEL_NO = @telNo where PLAKA = @plaka ";
                         SqlCommand komut = new SqlCommand();
                         komut.Parameters.AddWithValue("@plaka", comboPlaka.Text);
                         komut.Parameters.AddWithValue("@CikisTarihi", cikisGun.Text);
                         komut.Parameters.AddWithValue("@CikisSaati", cikisZaman.Text);
                         komut.Parameters.AddWithValue("@DonusTarih", donusGun.Text);
                         komut.Parameters.AddWithValue("@DonusSaati", donusZaman.Text);
+                        komut.Parameters.AddWithValue("@aracK", textSinifi.Text + " " + textRutbesi.Text + " " + textAdi.Text + " " + textSoyadi.Text + " " + textSicili.Text);
+                        komut.Parameters.AddWithValue("@telNo", textTel.Text);
                         arac.ekle_sil_guncelle(komut, sorgu);
                     }
                     MessageBox.Show("Görev Emri Tamamlandı", "Sonuç", MessageBoxButtons.OK);
@@ -151,7 +153,7 @@ namespace Proje
         {
             string sorgu = "update arac set CIKIS_TARIHI = @konvoyCikisTarihi, CIKIS_SAATI= @konvoyCikisSaati, " +
                 "DONUS_TARIHI=@konvoyDonusTarih,DONUS_SAATI=@konvoyDonusSaati, KONVOY_ID=@konvoyID, " +
-                "DURUM = 'DOLU' where PLAKA = @plaka ";
+                "DURUM = 'DOLU', ARAC_KOMUTANI=@aracK, ARAC_K_TEL_NO where PLAKA = @plaka ";
             SqlCommand komut = new SqlCommand();
             komut.Parameters.AddWithValue("@konvoyID", textKonvoy.Text);
             komut.Parameters.AddWithValue("@plaka", comboKonvoyPlaka.Text);
@@ -159,6 +161,8 @@ namespace Proje
             komut.Parameters.AddWithValue("@konvoyCikisSaati", cikisZaman.Text);
             komut.Parameters.AddWithValue("@konvoyDonusTarih", donusGun.Text);
             komut.Parameters.AddWithValue("@konvoyDonusSaati", donusZaman.Text);
+            komut.Parameters.AddWithValue("@aracK", textSinifi.Text + " " + textRutbesi.Text + " " + textAdi.Text + " " + textSoyadi.Text + " " + textSicili.Text);
+            komut.Parameters.AddWithValue("@telNo", textTel.Text);
             arac.ekle_sil_guncelle(komut, sorgu);
 
             MessageBox.Show("Araç Konvoya Eklendi", "Sonuç", MessageBoxButtons.OK);
@@ -186,7 +190,7 @@ namespace Proje
             if (i == DialogResult.Yes)
             {
                 string sorgu = "update arac set CIKIS_TARIHI = '', CIKIS_SAATI= '', DONUS_TARIHI='', " +
-                "DONUS_SAATI='', KONVOY_ID='', DURUM = 'BOŞ' where PLAKA = @plaka ";
+                "DONUS_SAATI='', KONVOY_ID='', DURUM = 'BOŞ', ARAC_KOMUTANI='', ARAC_K_TEL_NO='' where PLAKA = @plaka ";
                
                 SqlCommand komut = new SqlCommand();
                 komut.Parameters.AddWithValue("@plaka", comboKonvoyPlaka.Text);

@@ -76,7 +76,7 @@ namespace Proje
             }
             baglanti.Close();
         }
-        public void PerGoster(TextBox txt1,TextBox txt2,TextBox txt3, 
+        public void PerGoster(TextBox txt0,TextBox txt1,TextBox txt2,TextBox txt3, 
             TextBox txt4, TextBox txt5, string sorgu)
         {
             if (baglanti.State != ConnectionState.Open)
@@ -93,6 +93,7 @@ namespace Proje
                 txt3.Text = read["SINIFI"].ToString();
                 txt4.Text = read["RUTBESI"].ToString();
                 txt5.Text = read["SICILI"].ToString();
+                txt0.Text = read["TELEFON_NU"].ToString();
             }
             baglanti.Close();
         }

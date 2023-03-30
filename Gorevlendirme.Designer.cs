@@ -32,7 +32,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.btnPerAra = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblSicili = new System.Windows.Forms.Label();
+            this.textTel = new System.Windows.Forms.TextBox();
             this.textSicili = new System.Windows.Forms.TextBox();
             this.lblRutbesi = new System.Windows.Forms.Label();
             this.lblSinifi = new System.Windows.Forms.Label();
@@ -75,10 +77,10 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 231);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 256);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(783, 222);
+            this.dataGridView1.Size = new System.Drawing.Size(783, 239);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox1
@@ -86,7 +88,9 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Controls.Add(this.btnTemizle);
             this.groupBox1.Controls.Add(this.btnPerAra);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.lblSicili);
+            this.groupBox1.Controls.Add(this.textTel);
             this.groupBox1.Controls.Add(this.textSicili);
             this.groupBox1.Controls.Add(this.lblRutbesi);
             this.groupBox1.Controls.Add(this.lblSinifi);
@@ -98,7 +102,7 @@
             this.groupBox1.Controls.Add(this.textAdi);
             this.groupBox1.Location = new System.Drawing.Point(12, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 220);
+            this.groupBox1.Size = new System.Drawing.Size(279, 245);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Araç Komutanı Bilgileri";
@@ -108,7 +112,7 @@
             this.btnTemizle.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnTemizle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTemizle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnTemizle.Location = new System.Drawing.Point(22, 179);
+            this.btnTemizle.Location = new System.Drawing.Point(22, 206);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(109, 35);
             this.btnTemizle.TabIndex = 18;
@@ -121,13 +125,23 @@
             this.btnPerAra.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnPerAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerAra.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPerAra.Location = new System.Drawing.Point(154, 179);
+            this.btnPerAra.Location = new System.Drawing.Point(154, 206);
             this.btnPerAra.Name = "btnPerAra";
             this.btnPerAra.Size = new System.Drawing.Size(109, 35);
             this.btnPerAra.TabIndex = 18;
             this.btnPerAra.Text = "Personel Ara";
             this.btnPerAra.UseVisualStyleBackColor = false;
             this.btnPerAra.Click += new System.EventHandler(this.btnPerAra_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(13, 174);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 17);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Tel. Nu.";
             // 
             // lblSicili
             // 
@@ -138,6 +152,14 @@
             this.lblSicili.Size = new System.Drawing.Size(66, 17);
             this.lblSicili.TabIndex = 29;
             this.lblSicili.Text = "Sicili       :";
+            // 
+            // textTel
+            // 
+            this.textTel.Location = new System.Drawing.Point(85, 168);
+            this.textTel.Multiline = true;
+            this.textTel.Name = "textTel";
+            this.textTel.Size = new System.Drawing.Size(188, 24);
+            this.textTel.TabIndex = 28;
             // 
             // textSicili
             // 
@@ -247,7 +269,7 @@
             this.groupBox2.Controls.Add(this.comboMarka);
             this.groupBox2.Location = new System.Drawing.Point(297, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(498, 220);
+            this.groupBox2.Size = new System.Drawing.Size(498, 245);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Araç-Konvoy Bilgileri";
@@ -273,7 +295,7 @@
             this.btnAracListele.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnAracListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAracListele.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAracListele.Location = new System.Drawing.Point(258, 179);
+            this.btnAracListele.Location = new System.Drawing.Point(258, 205);
             this.btnAracListele.Name = "btnAracListele";
             this.btnAracListele.Size = new System.Drawing.Size(109, 35);
             this.btnAracListele.TabIndex = 18;
@@ -286,7 +308,7 @@
             this.btnKonvoyListele.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnKonvoyListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKonvoyListele.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnKonvoyListele.Location = new System.Drawing.Point(384, 179);
+            this.btnKonvoyListele.Location = new System.Drawing.Point(384, 205);
             this.btnKonvoyListele.Name = "btnKonvoyListele";
             this.btnKonvoyListele.Size = new System.Drawing.Size(109, 35);
             this.btnKonvoyListele.TabIndex = 18;
@@ -327,7 +349,7 @@
             this.btnRefresh.BackColor = System.Drawing.SystemColors.HighlightText;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRefresh.Location = new System.Drawing.Point(6, 179);
+            this.btnRefresh.Location = new System.Drawing.Point(6, 205);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(109, 35);
             this.btnRefresh.TabIndex = 18;
@@ -341,7 +363,7 @@
             this.btnGorev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGorev.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnGorev.ForeColor = System.Drawing.Color.Red;
-            this.btnGorev.Location = new System.Drawing.Point(132, 179);
+            this.btnGorev.Location = new System.Drawing.Point(132, 205);
             this.btnGorev.Name = "btnGorev";
             this.btnGorev.Size = new System.Drawing.Size(109, 35);
             this.btnGorev.TabIndex = 18;
@@ -512,7 +534,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(804, 465);
+            this.ClientSize = new System.Drawing.Size(804, 499);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
@@ -568,5 +590,7 @@
         private Button btnKonvoyListele;
         private Button btnAracListele;
         private Button btnKonAracSil;
+        private Label label8;
+        private TextBox textTel;
     }
 }

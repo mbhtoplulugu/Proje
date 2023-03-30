@@ -37,7 +37,7 @@
             this.lblSinifi = new System.Windows.Forms.Label();
             this.lblRutbesi = new System.Windows.Forms.Label();
             this.lblSicili = new System.Windows.Forms.Label();
-            this.textSicili = new System.Windows.Forms.TextBox();
+            this.textTel = new System.Windows.Forms.TextBox();
             this.btnPerEkle = new System.Windows.Forms.Button();
             this.btnPerIptal = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -126,11 +126,11 @@
             // 
             // textSicili
             // 
-            this.textSicili.Location = new System.Drawing.Point(131, 210);
-            this.textSicili.Multiline = true;
-            this.textSicili.Name = "textSicili";
-            this.textSicili.Size = new System.Drawing.Size(248, 30);
-            this.textSicili.TabIndex = 8;
+            this.textTel.Location = new System.Drawing.Point(131, 210);
+            this.textTel.Multiline = true;
+            this.textTel.Name = "textSicili";
+            this.textTel.Size = new System.Drawing.Size(248, 30);
+            this.textTel.TabIndex = 8;
             // 
             // btnPerEkle
             // 
@@ -167,7 +167,7 @@
             this.Controls.Add(this.btnPerIptal);
             this.Controls.Add(this.btnPerEkle);
             this.Controls.Add(this.lblSicili);
-            this.Controls.Add(this.textSicili);
+            this.Controls.Add(this.textTel);
             this.Controls.Add(this.lblRutbesi);
             this.Controls.Add(this.lblSinifi);
             this.Controls.Add(this.lblSoyadi);
@@ -197,9 +197,10 @@
         private Label lblSinifi;
         private Label lblRutbesi;
         private Label lblSicili;
-        private TextBox textSicili;
+        private TextBox textTel;
         private Button btnPerEkle;
         private Button btnPerIptal;
-
+        private TextBox textBox1;
+        private Label label1;
     }
 }

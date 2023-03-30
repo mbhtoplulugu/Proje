@@ -63,15 +63,16 @@ namespace Proje
             DialogResult i = MessageBox.Show("Personelin verileri geri dönmemek üzere değiştirilecektir. \nDevam etmek istiyor musunuz?", "Remove Window", MessageBoxButtons.YesNo);
             if (i == DialogResult.Yes)
             {
-                string sorgu = "update personel set ad=@ad, soyad=@soyad, SINIFI=@sınıfı, RUTBESI=@rütbesi, SICILI=@sicili " +
-                                " where SICILI = @sicili and SINIFI=@sınıfı ";
+                string sorgu = "update personel set ad=@ad, soyad=@soyad, SINIFI=@sınıfı, RUTBESI=@rütbesi, SICILI=@sicili, " +
+                                "TELEFON_NU=@tel where SICILI = @sicili and SINIFI=@sınıfı ";
                 SqlCommand komut = new SqlCommand();
                 komut.Parameters.AddWithValue("@ad", textAd.Text);
                 komut.Parameters.AddWithValue("@soyad", textSoyad.Text);
                 komut.Parameters.AddWithValue("@sınıfı", textSinif.Text);
                 komut.Parameters.AddWithValue("@rütbesi", textRutbe.Text);
                 komut.Parameters.AddWithValue("@sicili", textSicil.Text);
-                
+                komut.Parameters.AddWithValue("@tel", textTelNo.Text);
+
                 personel.ekle_sil_guncelle(komut, sorgu);
                 foreach (Control item in Controls) if (item is TextBox) item.Text = "";
                 
@@ -81,7 +82,7 @@ namespace Proje
 
         private void btnAra_Click_1(object sender, EventArgs e)
         {
-            string sorgu = "select * from personel where ad like '%" + textAd.Text + "%' and RUTBESI like '%" + textRutbe.Text + "%' and " +
+            string sorgu = "select * from personel where TELEFON_NU like '%" + textTelNo.Text + "%' and ad like '%" + textAd.Text + "%' and RUTBESI like '%" + textRutbe.Text + "%' and " +
                "soyad like '%" + textSoyad.Text + "%' and SINIFI like '%" + textSinif.Text + "%' and SICILI like '%" + textSicil.Text + "%'";
             SqlDataAdapter adtr2 = new SqlDataAdapter();
             dataGridView1.DataSource = personel.listele(adtr2, sorgu);
@@ -95,8 +96,7 @@ namespace Proje
             if (i == DialogResult.Yes)
             {
                 DataGridViewRow satır = dataGridView1.CurrentRow;
-                string cümle = " delete from personel where RUTBESI = '" + satır.Cells["RUTBESI"].Value.ToString() + "' and " +
-                    "SICILI = '" + satır.Cells["SICILI"].Value.ToString() + "'";
+                string cümle = " delete from personel where TELEFON_NU = '" + satır.Cells["TELEFON_NU"].Value.ToString() + "'  ";
                 SqlCommand komut2 = new SqlCommand();
                 personel.ekle_sil_guncelle(komut2, cümle);
                 foreach (Control item in Controls) if (item is TextBox) item.Text = "";
