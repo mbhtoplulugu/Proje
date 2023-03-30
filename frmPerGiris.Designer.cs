@@ -37,9 +37,11 @@
             this.lblSinifi = new System.Windows.Forms.Label();
             this.lblRutbesi = new System.Windows.Forms.Label();
             this.lblSicili = new System.Windows.Forms.Label();
-            this.textTel = new System.Windows.Forms.TextBox();
+            this.textSicili = new System.Windows.Forms.TextBox();
             this.btnPerEkle = new System.Windows.Forms.Button();
             this.btnPerIptal = new System.Windows.Forms.Button();
+            this.textTel = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textAdi
@@ -52,7 +54,7 @@
             // 
             // textSoyadi
             // 
-            this.textSoyadi.Location = new System.Drawing.Point(131, 80);
+            this.textSoyadi.Location = new System.Drawing.Point(131, 81);
             this.textSoyadi.Multiline = true;
             this.textSoyadi.Name = "textSoyadi";
             this.textSoyadi.Size = new System.Drawing.Size(248, 30);
@@ -60,7 +62,7 @@
             // 
             // textSinifi
             // 
-            this.textSinifi.Location = new System.Drawing.Point(131, 123);
+            this.textSinifi.Location = new System.Drawing.Point(131, 122);
             this.textSinifi.Multiline = true;
             this.textSinifi.Name = "textSinifi";
             this.textSinifi.Size = new System.Drawing.Size(248, 30);
@@ -68,7 +70,7 @@
             // 
             // textRutbesi
             // 
-            this.textRutbesi.Location = new System.Drawing.Point(131, 170);
+            this.textRutbesi.Location = new System.Drawing.Point(131, 163);
             this.textRutbesi.Multiline = true;
             this.textRutbesi.Name = "textRutbesi";
             this.textRutbesi.Size = new System.Drawing.Size(248, 30);
@@ -126,18 +128,18 @@
             // 
             // textSicili
             // 
-            this.textTel.Location = new System.Drawing.Point(131, 210);
-            this.textTel.Multiline = true;
-            this.textTel.Name = "textSicili";
-            this.textTel.Size = new System.Drawing.Size(248, 30);
-            this.textTel.TabIndex = 8;
+            this.textSicili.Location = new System.Drawing.Point(131, 204);
+            this.textSicili.Multiline = true;
+            this.textSicili.Name = "textSicili";
+            this.textSicili.Size = new System.Drawing.Size(248, 30);
+            this.textSicili.TabIndex = 8;
             // 
             // btnPerEkle
             // 
             this.btnPerEkle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPerEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerEkle.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPerEkle.Location = new System.Drawing.Point(313, 256);
+            this.btnPerEkle.Location = new System.Drawing.Point(314, 290);
             this.btnPerEkle.Name = "btnPerEkle";
             this.btnPerEkle.Size = new System.Drawing.Size(66, 45);
             this.btnPerEkle.TabIndex = 10;
@@ -150,13 +152,31 @@
             this.btnPerIptal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPerIptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPerIptal.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPerIptal.Location = new System.Drawing.Point(241, 256);
+            this.btnPerIptal.Location = new System.Drawing.Point(242, 290);
             this.btnPerIptal.Name = "btnPerIptal";
             this.btnPerIptal.Size = new System.Drawing.Size(66, 45);
             this.btnPerIptal.TabIndex = 11;
             this.btnPerIptal.Text = "İPTAL";
             this.btnPerIptal.UseVisualStyleBackColor = false;
             this.btnPerIptal.Click += new System.EventHandler(this.btnPerIptal_Click);
+            // 
+            // textTel
+            // 
+            this.textTel.Location = new System.Drawing.Point(131, 245);
+            this.textTel.Multiline = true;
+            this.textTel.Name = "textTel";
+            this.textTel.Size = new System.Drawing.Size(248, 30);
+            this.textTel.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(6, 254);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "TELEFON NU.";
             // 
             // frmPerGiris
             // 
@@ -166,8 +186,10 @@
             this.ClientSize = new System.Drawing.Size(407, 362);
             this.Controls.Add(this.btnPerIptal);
             this.Controls.Add(this.btnPerEkle);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblSicili);
             this.Controls.Add(this.textTel);
+            this.Controls.Add(this.textSicili);
             this.Controls.Add(this.lblRutbesi);
             this.Controls.Add(this.lblSinifi);
             this.Controls.Add(this.lblSoyadi);
@@ -179,7 +201,6 @@
             this.Name = "frmPerGiris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Ekleme Tablosu";
-            this.Load += new System.EventHandler(this.frmPerGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,10 +218,12 @@
         private Label lblSinifi;
         private Label lblRutbesi;
         private Label lblSicili;
-        private TextBox textTel;
+        private TextBox textSicili;
         private Button btnPerEkle;
         private Button btnPerIptal;
         private TextBox textBox1;
         private Label label1;
+        private TextBox textTel;
+        private Label label2;
     }
 }

@@ -23,7 +23,7 @@ namespace Proje
 
         private void btnPerEkle_Click(object sender, EventArgs e)
         {
-            if (textSinifi.Text.Length > 0 && textTel.Text.Length>0) {
+            if (textTel.Text.Length > 0 ) {
                 string sorgu1 = "insert into personel(ad,soyad,SINIFI,RUTBESI,SICILI,TELEFON_NU) values(@ad,@soyad,@sınıfı,@rütbesi,@sicili,@telNo)";
                 SqlCommand komut2 = new SqlCommand();
                 komut2.Parameters.AddWithValue("@ad", textAdi.Text);

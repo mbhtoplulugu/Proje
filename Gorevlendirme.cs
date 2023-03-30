@@ -84,7 +84,7 @@ namespace Proje
 
         private void btnPerAra_Click(object sender, EventArgs e)
         {
-            string sorgu = "select * from personel where AD like '%" + textAdi.Text + "%' and " +
+            string sorgu = "select * from personel where TELEFON_NU like '%" + textTel.Text + "%' and AD like '%" + textAdi.Text + "%' and " +
                "SOYAD like '%" + textSoyadi.Text + "%' and SINIFI like '%" + textSinifi.Text + "%' and SICILI like '%" + textSicili.Text + "%'";
             arac.PerGoster(textTel, textAdi, textSoyadi, textSinifi, textRutbesi, textSicili,  sorgu);
         }
