@@ -18,7 +18,7 @@ namespace Proje
 
         private void btnPerKayit_Click(object sender, EventArgs e)
         {
-            frmPerGiris ekle = new frmPerGiris();
+            Frm_Per_Kayýt ekle = new Frm_Per_Kayýt();
             ekle.ShowDialog();  
         }
 

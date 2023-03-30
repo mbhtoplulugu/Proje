@@ -1,6 +1,6 @@
 ﻿namespace Proje
 {
-    partial class frmPerGiris
+    partial class Frm_Per_Kayıt
     {
         /// <summary>
         /// Required designer variable.

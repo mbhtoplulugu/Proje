@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Proje
 {
-    public partial class frmPerGiris : Form
+    public partial class Frm_Per_Kayıt : Form
     {
         UlastirmaDB personel = new UlastirmaDB();
-        public frmPerGiris()
+        public Frm_Per_Kayıt()
         {
             InitializeComponent();
         }
